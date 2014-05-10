@@ -7,6 +7,11 @@ body {
   color: #555;
   background: #c8c3ad url("/images/bg-tex-darkest.jpg");
 }
+h1,
+h2,
+h3 {
+  color: #666;
+}
 .dark-bg {
   background: #c8c3ad url("/images/bg-tex-darkest.jpg");
 }
@@ -30,7 +35,6 @@ body {
   z-index: 2000;
 }
 .secondary {
-  background: blue;
   padding-left: 20px;
 }
 .main {
@@ -56,12 +60,12 @@ body {
     /* force infinitely tall columns*/
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   .main-content-wrapper .container-fluid {
-    width: 1200px;
+    width: 1300px;
   }
   #footer .container-fluid {
-    width: 1200px;
+    width: 1300px;
   }
 }
 /* Global things
@@ -69,9 +73,6 @@ body {
 .user-image {
   max-width: 100%;
   height: auto;
-}
-.bbbb {
-  margin: 0;
 }
 /* Game info col styles
 -------------------------------------------------- */
@@ -116,31 +117,51 @@ body {
 }
 /* Games presented elsewhere
 -------------------------------------------------- */
-.game-summary-box {
+.game-summary-box,
+.game-summary-box:visited {
   padding: 10px;
   margin-bottom: 10px;
   display: block;
   background: white;
+  text-decoration: none;
+}
+.game-summary-box:hover,
+.game-summary-box:active {
+  text-decoration: none;
 }
 .game-summary-box img {
   max-width: 100%;
   height: auto;
 }
+.game-summary-box__title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+.game-summary-box__summary p {
+  font-size: 0.8em;
+  margin: 0;
+}
 .secondary .game-summary-box {
   padding: 0;
   background: none;
+  margin: 20px 0;
 }
 /* Game posts styles
 -------------------------------------------------- */
 .game-post__content {
   position: relative;
   font-size: 1.2em;
+  padding-bottom: 20px;
 }
 .game-post__content a.next-post,
 .game-post__content a.prev-post {
   display: block;
   background: grey;
   padding: 10px;
+  margin-bottom: 20px;
   color: #fff;
   cursor: pointer;
   text-align: center;
@@ -185,7 +206,7 @@ body {
 .tagged-characters__character,
 .tagged-characters__character:visited {
   padding: 8px;
-  background: #4cae4c;
+  background: #e1dcc6;
   display: block;
   margin: 0 0 15px;
 }
@@ -218,6 +239,9 @@ body {
 }
 /* Footer styles
 -------------------------------------------------- */
+.facebook-box {
+  text-align: center;
+}
 #copy-area {
   height: 50px;
   background: #000;

@@ -44,7 +44,7 @@
 
 <div id="copy-area">
     <div class="container-fluid">
-        <p class="text-muted createdby">Created by David Ball</p>
+        <p class="text-muted createdby">Created by <a href="http://www.facebook.com/drball">David Ball</a></p>
 
         <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#">What is OngoingWorlds?</a></li>

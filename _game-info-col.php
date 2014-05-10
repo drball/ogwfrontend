@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row sidebar__content">
 
     <div class="col-xs-3 col-sm-12">
         <a href="#">
