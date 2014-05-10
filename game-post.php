@@ -42,15 +42,15 @@
                         </a>
 
                         <a class="tagged-characters__character" href="/games/270/characters/1151" data-content="A woman with an extremely convoluted background" data-original-title="Delphine Moreau" rel="popover" data-placement="left" data-trigger="hover">
-                            <img src="images/character1851-image.jpg" alt="Character name">
+                            <img src="images/character2111-image.jpg" alt="Character name">
                         </a>
 
                         <a class="tagged-characters__character" href="/games/270/characters/1151" data-content="A woman with an extremely convoluted background" data-original-title="Delphine Moreau" rel="popover" data-placement="left" data-trigger="hover">
-                            <img src="images/character1851-image.jpg" alt="Character name">
+                            <img src="images/character1002-image.jpg" alt="Character name">
                         </a>
 
                         <a class="tagged-characters__character" href="/games/270/characters/1151" data-content="A woman with an extremely convoluted background" data-original-title="Delphine Moreau" rel="popover" data-placement="left" data-trigger="hover">
-                            <img src="images/character1851-image.jpg" alt="Character name">
+                            <img src="images/character1151-image.jpg" alt="Character name">
                         </a>
                     </div>
 

@@ -1,13 +1,15 @@
 <div class="row">
 
     <div class="col-xs-3 col-sm-12">
-        <img src="images/game-image.jpg" class="img-responsive game-image" alt="game">
+        <a href="#">
+            <img src="images/game-image.jpg" class="img-responsive game-image" alt="game">
+        </a>
     </div>
 
     <div class="col-xs-9 col-sm-12">
 
 
-        <h2 class="game-title text-center">JMC Blue Dwarf</h2>
+        <h2 class="game-title text-center"><a href="#">JMC Blue Dwarf</a></h2>
 
 <!--        <div class="game-description">-->
 <!--            <h3>Description:</h3>-->
@@ -26,7 +28,7 @@
 
             <?php
 
-            $isLoggedIn = true;
+            $isLoggedIn = false;
 
             if ($isLoggedIn == true): ?>
 
@@ -59,7 +61,7 @@
 
             <?php else: ?>
                 <p>You are not a member of this game</p>
-                <a href="#" class="btn btn-primary">Join game</a>
+                <a href="#" class="btn btn-primary btn-lg center-block">Join this game</a>
             <?php endif; ?>
         </div>
 
