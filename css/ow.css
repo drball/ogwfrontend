@@ -82,7 +82,7 @@ h3 {
 }
 .sidebar--game-info-col .game-image {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 19px;
 }
 .user-game-relationship {
   background: palegreen;
@@ -114,6 +114,9 @@ h3 {
   margin-right: -15px;
   height: 60px;
   background-size: cover;
+}
+.game-bg-image--full {
+  height: 240px;
 }
 /* Games presented elsewhere
 -------------------------------------------------- */
@@ -148,6 +151,11 @@ h3 {
   padding: 0;
   background: none;
   margin: 20px 0;
+}
+@media (min-width: 768px) {
+  .secondary__content-wrapper {
+    margin-left: 15px;
+  }
 }
 /* Game posts styles
 -------------------------------------------------- */

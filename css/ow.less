@@ -48,7 +48,7 @@ h3          { color:#666; }
 -------------------------------------------------- */
 .sidebar--game-info-col               {  }
 .sidebar--game-info-col .game-title   { font-size:1.5em; font-weight: bold; }
-.sidebar--game-info-col .game-image   { width:100%; margin-top:20px; }
+.sidebar--game-info-col .game-image   { width:100%; margin-top:19px; }
 
 .user-game-relationship               { background:palegreen; margin:20px -23px 20px -15px; padding:10px 8px 10px 10px; }
 .user-game-relationship .user-image   { width:40px; max-width:40px; margin-right:10px; }
@@ -66,7 +66,7 @@ h3          { color:#666; }
 
 
 .game-bg-image        { margin-left:-15px; margin-right:-15px; height:60px; background-size: cover; }
-
+.game-bg-image--full  { height:240px; }
 
 /* Games presented elsewhere
 -------------------------------------------------- */
@@ -80,6 +80,11 @@ h3          { color:#666; }
 .game-summary-box__summary p    { font-size:0.8em; margin:0; }
 
 .secondary .game-summary-box    { padding:0; background:none; margin:20px 0; }
+.secondary__content-wrapper     {  }
+
+@media (min-width: 768px) {
+  .secondary__content-wrapper     { margin-left:15px; }
+}
 
 
 /* Game posts styles
