@@ -1,16 +1,71 @@
 /* Variables
 -------------------------------------------------- */
-/* Global styles
+/* Common screen sizes for media queries
+-------------------------------------------------- */
+/* Layout styles
 -------------------------------------------------- */
 body {
   font: Georgia, serif;
   color: #555;
   background: #c8c3ad url("/images/bg-tex-darkest.jpg");
 }
+.container-wrapper {
+  overflow: hidden;
+  margin: 0 auto;
+}
+.navbar {
+  margin: 0;
+}
+.sidebar {
+  background: #ede8d4 url("/images/bg-tex-med.jpg");
+  z-index: 100;
+}
+.secondary {
+  padding-left: 20px;
+}
+.main {
+  background: white;
+  z-index: 200;
+  padding-bottom: 15px;
+}
+.footer {
+  background-color: #f5f5f5;
+  padding: 15px 0;
+}
+@media (min-width: 768px) {
+  .sidebar {
+    padding-bottom: 5000px;
+    margin-bottom: -5000px;
+  }
+  /* force infinitely tall columns*/
+}
+@media (min-width: 992px) {
+  .main {
+    padding-bottom: 5000px;
+    margin-bottom: -5000px;
+    /* force infinitely tall columns*/
+  }
+}
+@media (min-width: 1300px) {
+  .container-wrapper .container-fluid {
+    width: 1300px;
+  }
+  .footer .container-fluid {
+    width: 1300px;
+  }
+}
+/* Global styles
+-------------------------------------------------- */
 h1,
 h2,
 h3 {
   color: #666;
+}
+h1:first-of-type,
+h2:first-of-type,
+h3:first-of-type,
+h4:first-of-type {
+  margin-top: 0;
 }
 .dark-bg {
   background: #c8c3ad url("/images/bg-tex-darkest.jpg");
@@ -21,59 +76,64 @@ h3 {
 .light-bg {
   background: #ede8d4 url("/images/bg-tex-light.jpg");
 }
-/* Layout styles
--------------------------------------------------- */
-.main-content-wrapper {
-  overflow: hidden;
-  margin: 0 auto;
-}
-.navbar {
-  margin: 0;
-}
-.sidebar {
-  background: #ede8d4 url("/images/bg-tex-med.jpg");
-  z-index: 2000;
-}
-.secondary {
-  padding-left: 20px;
-}
-.main {
-  background: white;
-  z-index: 1000;
-  padding-bottom: 15px;
-}
-#footer {
-  background-color: #f5f5f5;
-  padding: 15px 0;
-}
-@media (min-width: 768px) {
-  .sidebar {
-    padding-bottom: 5000px;
-    margin-bottom: -5000px;
-    /* force infinitely tall columns*/
-  }
-}
-@media (min-width: 992px) {
-  .main {
-    padding-bottom: 5000px;
-    margin-bottom: -5000px;
-    /* force infinitely tall columns*/
-  }
-}
-@media (min-width: 1300px) {
-  .main-content-wrapper .container-fluid {
-    width: 1300px;
-  }
-  #footer .container-fluid {
-    width: 1300px;
-  }
-}
-/* Global things
--------------------------------------------------- */
 .user-image {
   max-width: 100%;
   height: auto;
 }
+/* Shared components between layouts
+-------------------------------------------------- */
+.stripe {
+  background: green;
+  padding: 30px 0;
+  color: #fff;
+}
+.main-title {
+  color: #fff;
+}
+.main-title--avoid-logo {
+  color: #fff;
+  margin-left: 135px;
+}
+.logo-monster {
+  width: 311px;
+  height: auto;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  z-index: 300;
+}
+.logo-monster--medium {
+  width: 311px;
+  height: auto;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  z-index: 300;
+  width: 150px;
+}
+/* Footer styles
+-------------------------------------------------- */
+.facebook-box {
+  text-align: center;
+}
+#copy-area {
+  height: 50px;
+  background: #000;
+  color: #fff;
+}
+#copy-area .createdby {
+  float: left;
+  display: inline-block;
+  margin: 10px 0;
+}
+@media (min-width: 992px) {
+  .footer__first-col {
+    margin-left: -15px;
+    /* To line the columns up*/
+  }
+}
+/* Specific layouts
+-------------------------------------------------- */
 /* Game info col styles
 -------------------------------------------------- */
 .sidebar--game-info-col .game-title {
@@ -244,19 +304,4 @@ h3 {
     margin: 0 -113px 0 0;
     width: 96px;
   }
-}
-/* Footer styles
--------------------------------------------------- */
-.facebook-box {
-  text-align: center;
-}
-#copy-area {
-  height: 50px;
-  background: #000;
-  color: #fff;
-}
-#copy-area .createdby {
-  float: left;
-  display: inline-block;
-  margin: 10px 0;
 }
