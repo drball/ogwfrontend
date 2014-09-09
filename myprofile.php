@@ -12,7 +12,7 @@
 
     </div>
 
-    <div class="container-wrapper">
+    <div class="container-wrapper hide-overflow">
         <div class="container-fluid">
 
             <div class="row">

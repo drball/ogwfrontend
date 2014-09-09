@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-5 col-md-4 footer__first-col">
-                    <div id="facebook-box">
+                    <div class="footer__facebook-box">
                         <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fongoingworlds&amp;width=300px&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=270298453071715" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300pxpx; height:290px;" allowTransparency="true"></iframe>
                     </div>
                 </div>

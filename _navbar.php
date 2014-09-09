@@ -1,10 +1,14 @@
-<img src="/images/monster.png" width="311" height="278" alt="A monster holding the Earth in it's tentacles" class="logo-monster--medium">
 
 <div class="navbar navbar-inverse container-wrapper" role="navigation">
 
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+    <div class="container-fluid">
+
+        <img src="/images/monster.png" width="311" height="278" alt="A monster holding the Earth in it's tentacles" class="logo-monster--medium">
+
+
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -25,6 +29,8 @@
 
             </div><!--/.nav-collapse -->
         </div>
+
+
 
 </div>
 
