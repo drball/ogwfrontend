@@ -18,10 +18,10 @@
 
 
         <ul class="nav nav-sidebar nav-sidebar--game-nav">
-            <li class="active"><a href="#">View Posts <i class="glyphicon glyphicon-align-center"></i></a></li>
-            <li><a href="#">Characters <i class="glyphicon glyphicon-user"></i></a></li>
-            <li><a href="#">Members <i class="glyphicon glyphicon-eye-open"></i></a></li>
-            <li><a href="#">Game Information <i class="glyphicon glyphicon-info-sign"></i></a></li>
+            <li class="active"><a href="#">View Posts </a></li>
+            <li><a href="#">Characters </a></li>
+            <li><a href="#">Members </a></li>
+            <li><a href="#">Game Information </a></li>
         </ul>
 
         <div class="user-game-relationship">

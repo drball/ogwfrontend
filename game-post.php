@@ -2,20 +2,27 @@
 
 <?php include("_navbar.php") ?>
 
-<div class="main-content-wrapper">
+<div class="stripe">
 
     <div class="container-fluid">
+        <button class="btn btn-primary">sdsd</button>
+    </div>
+
+</div>
+
+<div class="main-content-wrapper--overlap">
+
+    <div class="container-fluid main-container">
 
         <div class="row">
 
-            <div class="col-xs-12 col-sm-3 col-md-3 sidebar sidebar--game-info-col infinite-height">
+            <div class="col-xs-12 col-sm-3 col-md-3 sidebar sidebar--game-info-col">
 
                <?php include("_game-info-col.php") ?>
 
             </div>
 
-            <div class="col-xs-12 col-sm-9 col-md-7 main game-post infinite-height">
-                <div class="game-bg-image" style="background:url(images/heavyrain-pbem.jpg)"></div>
+            <div class="col-xs-12 col-sm-9 col-md-7 main game-post">
 
                 <h1>Post title of this post</h1>
 

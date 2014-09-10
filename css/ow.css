@@ -7,26 +7,33 @@
 body {
   font: Georgia, serif;
   color: #555;
-  background: #c8c3ad url("/images/bg-tex-darkest.jpg");
+  background: #DAD5BF;
+}
+.main-content-wrapper .container-fluid {
+  overflow: hidden;
 }
 .navbar {
   margin: 0;
 }
 .sidebar {
-  background: #ede8d4 url("/images/bg-tex-med.jpg");
+  background: #ffffff;
   z-index: 100;
 }
 .secondary {
   padding-left: 20px;
 }
 .main {
-  background: white;
+  background: #ffffff;
   z-index: 200;
   padding-bottom: 15px;
+  padding-top: 20px;
 }
 .footer {
   background-color: #f5f5f5;
   padding: 15px 0;
+}
+.footer-bar {
+  background: #000;
 }
 @media (min-width: 768px) {
   .sidebar {
@@ -34,6 +41,12 @@ body {
     margin-bottom: -5000px;
   }
   /* force infinitely tall columns*/
+  .navbar {
+    border-radius: 0;
+  }
+  .main-container {
+    width: 98%;
+  }
 }
 @media (min-width: 992px) {
   .main {
@@ -53,6 +66,24 @@ body {
 .hide-overflow {
   overflow: hidden;
 }
+/* Layouts that overlap the stripe
+-------------------------------------------------- */
+@media (min-width: 768px) {
+  .main-content-wrapper--overlap {
+    margin-top: -80px;
+  }
+  .main-content-wrapper--overlap .container-fluid {
+    overflow: hidden;
+  }
+  .main-content-wrapper--overlap .main {
+    margin-top: 80px;
+    /* To match the offset */
+  }
+  .main-content-wrapper--overlap .secondary {
+    margin-top: 75px;
+    /* To match the offset */
+  }
+}
 /* Navbar styles
 -------------------------------------------------- */
 .navbar .container-fluid {
@@ -71,6 +102,9 @@ body {
 }
 /* Footer styles
 -------------------------------------------------- */
+.footer__facebook-box {
+  text-align: center;
+}
 #copy-area {
   height: 50px;
   background: #000;
@@ -81,7 +115,12 @@ body {
   display: inline-block;
   margin: 10px 0;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+  .footer__facebook-box {
+    text-align: left;
+  }
+}
+@media (min-width: 1300px) {
   .footer__first-col {
     margin-left: -15px;
     /* To line the columns up*/
@@ -100,23 +139,17 @@ h3:first-of-type,
 h4:first-of-type {
   margin-top: 0;
 }
-.dark-bg {
-  background: #c8c3ad url("/images/bg-tex-darkest.jpg");
-}
-.medium-bg {
-  background: #e1dcc6 url("/images/bg-tex-med.jpg");
-}
-.light-bg {
-  background: #ede8d4 url("/images/bg-tex-light.jpg");
-}
 .user-image {
   max-width: 100%;
   height: auto;
 }
+a {
+  color: #56742a;
+}
 /* Shared components between layouts
 -------------------------------------------------- */
 .stripe {
-  background: green;
+  background: #56742A;
   padding: 20px 0;
   color: #fff;
   -webkit-transition: all 500ms linear;
@@ -125,6 +158,8 @@ h4:first-of-type {
 @media (min-width: 768px) {
   .stripe {
     padding: 30px 0;
+    border-bottom: 5px solid #56742A;
+    height: 100px;
   }
 }
 .main-title,
@@ -165,16 +200,16 @@ h4:first-of-type {
 }
 @media (min-width: 768px) {
   .logo-monster {
-    width: 150px;
+    width: 90px;
     left: 0;
   }
   .logo-monster--medium {
-    width: 150px;
+    width: 90px;
     left: 0;
     width: 155px;
   }
   .logo-monster--large {
-    width: 150px;
+    width: 90px;
     left: 0;
     width: 311px;
   }
@@ -206,9 +241,6 @@ h4:first-of-type {
 }
 .user-game-relationship__new-post {
   margin: 10px 0 10px 50px;
-}
-.nav-sidebar--game-nav .glyphicon {
-  float: right;
 }
 .nav-sidebar--game-nav a,
 .nav-sidebar--game-nav a:visited {
@@ -321,7 +353,7 @@ h4:first-of-type {
 .tagged-characters__character,
 .tagged-characters__character:visited {
   padding: 8px;
-  background: #e1dcc6;
+  background: #4c818f;
   display: block;
   margin: 0 0 15px;
 }

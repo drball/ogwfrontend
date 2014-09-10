@@ -3,7 +3,7 @@
 
     <div class="container-fluid">
 
-        <img src="/images/monster.png" width="311" height="278" alt="A monster holding the Earth in it's tentacles" class="logo-monster--medium">
+        <img src="/images/monster.png" width="311" height="278" alt="A monster holding the Earth in it's tentacles" class="logo-monster">
 
 
         <div class="navbar-header">
@@ -29,8 +29,6 @@
 
             </div><!--/.nav-collapse -->
         </div>
-
-
 
 </div>
 

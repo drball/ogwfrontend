@@ -3,45 +3,45 @@
 <?php include("_navbar.php") ?>
 
 
-    <div class="stripe">
-        <div class="container-wrapper">
-            <div class="container-fluid">
-                <h1 class="main-title--avoid-logo">Onion's public profile</h1>
-            </div>
-        </div>
+<div class="stripe">
 
+    <div class="container-fluid">
+        <h1 class="main-title--avoid-logo">Onion's public profile</h1>
     </div>
 
-    <div class="container-wrapper hide-overflow">
-        <div class="container-fluid">
 
-            <div class="row">
+</div>
 
-                <div class="col-xs-12 main">
+<div class="main-content-wrapper">
+    <div class="container-fluid main-container">
 
-                    <h1>JMC Blue Dwarf <span class="hidden">- a play-by-post roleplaying game</span></h1>
+        <div class="row">
 
-                    <div class="row">
-                        <div class="col-md-9">
-                            <div class="game-summary" style="display: block;">
-                                <p>Hero High is a high school where young super humans are taught how to use their powers.  This establishment was created back in the fifties to help super humans learn to control their powers after one to many incidents.  Once a child is identified as a super human they are automatically enrolled by <span class="read-more" style="display: inline;">… <a href="#">Show More</a></span></p>
-                            </div>
-                        </div>
+            <div class="col-xs-12 main">
 
-                        <div class="col-md-3">
+                <h1>JMC Blue Dwarf <span class="hidden">- a play-by-post roleplaying game</span></h1>
 
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="game-summary" style="display: block;">
+                            <p>Hero High is a high school where young super humans are taught how to use their powers.  This establishment was created back in the fifties to help super humans learn to control their powers after one to many incidents.  Once a child is identified as a super human they are automatically enrolled by <span class="read-more" style="display: inline;">… <a href="#">Show More</a></span></p>
                         </div>
                     </div>
 
+                    <div class="col-md-3">
 
-
+                    </div>
                 </div>
+
 
 
             </div>
 
-        </div><!-- /.container -->
-    </div>
+
+        </div>
+
+    </div><!-- /.container -->
+</div>
 
 
 
