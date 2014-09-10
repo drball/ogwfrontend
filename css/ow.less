@@ -131,11 +131,22 @@ h3          { color:#666; }
 
 .user-image         { max-width:100%; height:auto; }
 
-a         { color:@dark-brand; }
+a         { color:@dark-brand-text; }
 a:hover,
 a:active  { color:@contrasting-brand; text-decoration: underline; }
 
 .img-responsive { width:100%; }
+
+.btn {
+  background:@bg-darkest;
+  border-radius:0;
+  font-weight: bold;
+}
+.btn:hover,
+.btn:active {
+  background:@light-brand;
+  color:#fff;
+}
 
 /* Shared components between layouts
 -------------------------------------------------- */
@@ -156,6 +167,7 @@ a:active  { color:@contrasting-brand; text-decoration: underline; }
     height:100px;
   }
 }
+
 
 .main-title,
 .main-title--avoid-logo {
@@ -243,7 +255,7 @@ a:active  { color:@contrasting-brand; text-decoration: underline; }
 
 .sidebar__game-image   { width:100%; margin-top:19px; }
 
-.user-game-relationship               { background:palegreen; margin:20px -23px 20px -15px; padding:10px 8px 10px 10px; }
+.user-game-relationship               { margin:20px -23px 20px -15px; padding:10px 8px 10px 10px; }
 .user-game-relationship .user-image   { width:40px; max-width:40px; margin-right:10px; }
 
 .user-game-relationship__user-status   { margin-left:50px; }
@@ -251,7 +263,7 @@ a:active  { color:@contrasting-brand; text-decoration: underline; }
 
 .nav-sidebar                      { margin:0 0 10px -15px; }
 .nav-sidebar > li > a,
-.nav-sidebar > li > a:visited     {  }
+.nav-sidebar > li > a:visited     { transition:background 200ms, color 200ms; }
 .nav-sidebar > li > a:hover,
 .nav-sidebar > li > a:active      { background: rgba(151, 168, 53, .2); color:#555; }
 .nav-sidebar > li.active > a,

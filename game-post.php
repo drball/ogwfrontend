@@ -33,7 +33,7 @@
 
 
                 <div class="post__author-wrapper">
-                    <a class="post__prev-post">&lt; Previous <span class="hidden">post</span></a>
+                    <a class="btn post__prev-post">&lt; Previous <span class="hidden">post</span></a>
 
                     <div class="post__author-info">
                         <a href="#" data-content="Posted by Alex Solvay" rel="popover" data-original-title="ssss" data-placement="right" data-trigger="hover">
@@ -77,7 +77,7 @@
                 <p>Cack-handed wacken thi sen up chuffin' nora. Nay lad god's own county. Any rooad nay lad by 'eck god's own county be reet. Where's tha bin soft southern pansy. Eeh. Ne'ermind tell thi summat for nowt. Michael palin shu' thi gob any rooad tintintin. God's own county eeh by 'eck breadcake ah'll gi' thi summat to rooer abaht. Nobbut a lad. Be reet nah then.</p>
 
 
-                <a class="post__next-post">Next post &gt;</a>
+                <a class="btn post__next-post">Next post &gt;</a>
 
 
 

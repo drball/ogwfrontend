@@ -156,7 +156,7 @@ h3 {
   height: auto;
 }
 a {
-  color: #56742a;
+  color: #527234;
 }
 a:hover,
 a:active {
@@ -165,6 +165,16 @@ a:active {
 }
 .img-responsive {
   width: 100%;
+}
+.btn {
+  background: #c8c3ad url(../images/bg-tex-darkest.jpg);
+  border-radius: 0;
+  font-weight: bold;
+}
+.btn:hover,
+.btn:active {
+  background: #97a835;
+  color: #fff;
 }
 /* Shared components between layouts
 -------------------------------------------------- */
@@ -278,8 +288,6 @@ a:active {
 }
 .post__prev-post,
 .post__next-post {
-  background: red;
-  color: #fff;
   display: block;
 }
 .post__prev-post {
@@ -349,7 +357,6 @@ a:active {
   margin-top: 19px;
 }
 .user-game-relationship {
-  background: palegreen;
   margin: 20px -23px 20px -15px;
   padding: 10px 8px 10px 10px;
 }
@@ -366,6 +373,10 @@ a:active {
 }
 .nav-sidebar {
   margin: 0 0 10px -15px;
+}
+.nav-sidebar > li > a,
+.nav-sidebar > li > a:visited {
+  transition: background 200ms, color 200ms;
 }
 .nav-sidebar > li > a:hover,
 .nav-sidebar > li > a:active {
