@@ -1,0 +1,105 @@
+@import 'variables';
+
+
+/* Game posts styles
+-------------------------------------------------- */
+.post       { font-size:1.2em; }
+
+.game-post__content a.next-post,
+.game-post__content a.prev-post       { display:block;background:grey; padding:10px; margin-bottom:20px; color:#fff; cursor: pointer; text-align: center; }
+.game-post__content a.next-post:hover,
+.game-post__content a.prev-post:hover { background: indianred; }
+
+.game-post__content a.prev-post       { position:absolute; top:0; left:-75px; width:60px; }
+.game-post__content a.next-post       { float:right; width:140px; }
+
+.post__title,
+.post h1 {
+  margin-top:0;
+}
+
+.post__author-wrapper {
+  float:left;
+  margin:0 15px 15px 0;
+  width:120px;
+}
+
+.post__author-info {
+
+}
+
+.post__prev-post,
+.post__next-post {
+  background:red;
+  color:#fff;
+  display:block;
+}
+
+.post__prev-post {
+  margin-bottom:15px;
+}
+
+
+.post__next-post {
+
+}
+
+
+.post .last-post-panel     { background:#28a4c9; padding:10px; }
+.post .post-info           { font-size:0.9em; font-style: italic; }
+
+.tagged-characters {
+  float:right;
+  display:block;
+  width:80px;
+  margin-left:15px;
+  margin-top:-21px;
+}
+
+
+.tagged-characters__character,
+.tagged-characters__character:visited {
+  padding:5px;
+  display:block;
+  margin:0 0 15px;
+  background:#fff;
+  border:1px solid #eee;
+  -webkit-transition:all 200ms;
+  transition:all 200ms;
+}
+.tagged-characters__character:hover,
+.tagged-characters__character:active  {
+  background:@light-brand;
+  border-color:@light-brand;
+}
+.tagged-characters__character img {
+  width:100%;
+  height:auto;
+}
+.tagged-characters__title {
+  font-size:0.85em;
+  text-align: center;
+  margin:0 12px 10px 0;
+}
+
+@media (min-width: @screen-sm-min) {
+
+  .tagged-characters        {  }
+}
+
+@media (min-width: @screen-md-min) {
+
+  .tagged-characters {
+    width:96px;
+    margin-right:-20px;
+  }
+
+
+}
+
+
+@media (min-height: 810px)
+{
+  //  .sidebar__content				{ top: 50px; position: fixed !important; }
+}
+

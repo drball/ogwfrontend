@@ -1,33 +1,22 @@
 /* Variables
 -------------------------------------------------- */
-@dark-brand: #56742A;
-@light-brand: #fff;
-@contrasting-brand: #4C818F;
-@bg-brand: #DAD5BF;
+@import 'variables';
 
-/* Common screen sizes for media queries
--------------------------------------------------- */
-@screen-sm-min: 768px;
-@screen-sm-max: 767px;
-@screen-md-min: 992px;
-@screen-md-max: 991px;
-@screen-lg-min: 1200px;
-@screen-lg-max: 1199px;
-@screen-max-width: 1300px;
+
 
 
 /* Layout styles
 -------------------------------------------------- */
 
-body					{ font: Georgia, serif; color:#555; background:#DAD5BF; }
+body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
 
 .main-content-wrapper   {  }
 .main-content-wrapper .container-fluid   { overflow:hidden; }
-.navbar                 { margin:0; }
-.sidebar                { background:@light-brand; z-index:100; }
+.navbar                 { margin:0; background:@bg-navbar; }
+.sidebar                { background:@light-bg; z-index:100; }
 .secondary              { padding-left:20px; }
-.main                   { background:@light-brand; z-index:200; padding-bottom:15px; padding-top: 20px; }
-.footer                 { background-color: #f5f5f5; padding:15px 0; }
+.main                   { background:@light-bg; z-index:200; padding-bottom:15px; padding-top: 20px; }
+.footer                 { background: @bg-navbar; padding:15px 0; }
 .footer-bar             { background:#000; }
 
 @media (min-width: @screen-sm-min) {
@@ -39,6 +28,7 @@ body					{ font: Georgia, serif; color:#555; background:#DAD5BF; }
 @media (min-width: @screen-md-min) {
 
   .main             { padding-bottom:5000px; margin-bottom:-5000px; /* force infinitely tall columns*/ }
+  .secondary        { padding-right:0; }
 }
 
 @media (min-width: 1300px) {
@@ -53,21 +43,24 @@ body					{ font: Georgia, serif; color:#555; background:#DAD5BF; }
 -------------------------------------------------- */
 
 @media (min-width: @screen-sm-min) {
-  .main-content-wrapper--overlap   {
-    .main-content-wrapper;
+  .game-layout   {
     margin-top:-80px;
   }
 
-  .main-content-wrapper--overlap .container-fluid   {
+  .game-layout .container-fluid   {
     overflow:hidden;
   }
 
-  .main-content-wrapper--overlap .main {
+  .game-layout .main {
     margin-top:80px; /* To match the offset */
   }
 
-  .main-content-wrapper--overlap .secondary {
+  .game-layout .secondary {
     margin-top:75px; /* To match the offset */
+  }
+
+  .game-layout .main {
+    padding-left:0;
   }
 }
 
@@ -75,6 +68,7 @@ body					{ font: Georgia, serif; color:#555; background:#DAD5BF; }
 
 /* Navbar styles
 -------------------------------------------------- */
+
 .navbar .container-fluid  {
   position:relative;
 }
@@ -83,11 +77,21 @@ body					{ font: Georgia, serif; color:#555; background:#DAD5BF; }
   position:absolute;
   left:65px;
   top:0px;
+  font-weight: bold;
+  color:#555;
+  font-size:1.8em;
+  letter-spacing: -0.04em;
+}
+
+.navbar-brand:hover,
+.navbar-brand:active {
+  color:@dark-brand;
 }
 
 @media (min-width: @screen-sm-min) {
   .navbar-brand {
-    left:140px;
+//    left:140px;
+    left:100px;
     top:0px;
   }
 }
@@ -96,7 +100,7 @@ body					{ font: Georgia, serif; color:#555; background:#DAD5BF; }
 -------------------------------------------------- */
 
 .footer__facebook-box       { text-align: center; }
-
+.footer__facebook-box iframe  { background:#fff; }
 
 
 #copy-area                  { height:50px; background:#000; color:#fff; }
@@ -124,22 +128,21 @@ h1,
 h2,
 h3          { color:#666; }
 
-h1:first-of-type,
-h2:first-of-type,
-h3:first-of-type,
-h4:first-of-type  { margin-top:0; }
-
-
 
 .user-image         { max-width:100%; height:auto; }
 
 a         { color:@dark-brand; }
+a:hover,
+a:active  { color:@contrasting-brand; text-decoration: underline; }
 
+.img-responsive { width:100%; }
 
 /* Shared components between layouts
 -------------------------------------------------- */
 .stripe   {
-  background:#56742A;
+  background:#56742A url(http://img1.wikia.nocookie.net/__cb20090923083723/finalfantasy/images/7/78/Fortress_-_FFXII_Judge_and_Floating_Rocks.jpg);
+  background-size:cover;
+  background-position-y: center;
   padding:20px 0;
   color:#fff;
   -webkit-transition: all 500ms linear;
@@ -149,7 +152,7 @@ a         { color:@dark-brand; }
 @media (min-width: @screen-sm-min) {
   .stripe {
     padding:30px 0;
-    border-bottom:5px solid #56742A;
+    border-bottom:5px solid @dark-brand;
     height:100px;
   }
 }
@@ -223,9 +226,22 @@ a         { color:@dark-brand; }
 
 /* Game info col styles
 -------------------------------------------------- */
-.sidebar--game-info-col               {  }
-.sidebar--game-info-col .game-title   { font-size:1.5em; font-weight: bold; }
-.sidebar--game-info-col .game-image   { width:100%; margin-top:19px; }
+
+.sidebar {
+  padding-top:15px;
+}
+
+@media (min-width: @screen-sm-min) {
+  .sidebar {
+
+  }
+}
+
+.sidebar__game-title   { font-size:1.5em; font-weight: bold; margin:10px 0; }
+.sidebar__game-title a,
+.sidebar__game-title a:visited  { color:#666; }
+
+.sidebar__game-image   { width:100%; margin-top:19px; }
 
 .user-game-relationship               { background:palegreen; margin:20px -23px 20px -15px; padding:10px 8px 10px 10px; }
 .user-game-relationship .user-image   { width:40px; max-width:40px; margin-right:10px; }
@@ -233,9 +249,13 @@ a         { color:@dark-brand; }
 .user-game-relationship__user-status   { margin-left:50px; }
 .user-game-relationship__new-post      { margin:10px 0 10px 50px;  }
 
-.nav-sidebar--game-nav            {  }
-.nav-sidebar--game-nav a,
-.nav-sidebar--game-nav a:visited    { border-bottom:1px dashed grey; }
+.nav-sidebar                      { margin:0 0 10px -15px; }
+.nav-sidebar > li > a,
+.nav-sidebar > li > a:visited     {  }
+.nav-sidebar > li > a:hover,
+.nav-sidebar > li > a:active      { background: rgba(151, 168, 53, .2); color:#555; }
+.nav-sidebar > li.active > a,
+.nav-sidebar > li.active > a:visited  { background: #97A835; color:#fff; }
 
 /* Game styles
 -------------------------------------------------- */
@@ -261,49 +281,5 @@ a         { color:@dark-brand; }
 @media (min-width: 768px) {
   .secondary__content-wrapper     { margin-left:15px; }
 }
-
-
-/* Game posts styles
--------------------------------------------------- */
-.game-post            {  }
-.game-post__content   { position:relative; font-size:1.2em; padding-bottom:20px;  }
-
-.game-post__content a.next-post,
-.game-post__content a.prev-post       { display:block;background:grey; padding:10px; margin-bottom:20px; color:#fff; cursor: pointer; text-align: center; }
-.game-post__content a.next-post:hover,
-.game-post__content a.prev-post:hover { background: indianred; }
-
-.game-post__content a.prev-post       { position:absolute; top:0; left:-75px; width:60px; }
-.game-post__content a.next-post       { float:right; width:140px; }
-
-.game-post .last-post-panel     { background:#28a4c9; padding:10px; }
-.game-post .post-info           { font-size:0.9em; font-style: italic; }
-.game-post .author-info         { width:60px; height:60px; float:left; margin-top:2px; position: absolute; top:50px; left:-75px; }
-.tagged-characters                    { float:right; display:block; width:96px; margin-left:15px; }
-.tagged-characters__character,
-.tagged-characters__character:visited { padding:8px; background:@contrasting-brand; display:block; margin:0 0 15px; }
-.tagged-characters__character:hover,
-.tagged-characters__character:active  { background:#269abc; }
-.tagged-characters__character img     { width:80px; height:auto; }
-.tagged-characters__title             { font-size:0.85em; text-align: center; margin:0 12px 10px 0; }
-
-@media (min-width: 768px) {
-  .game-post__content       { margin:0 0 0 75px; }
-  .tagged-characters        {  }
-}
-
-@media (min-width: 992px) {
-
-  .game-post__content       {  }
-  .game-post__content       { margin:0 90px 0 75px;  }
-  .tagged-characters        { margin:0 -113px 0 0; width:96px; }
-}
-
-
-@media (min-height: 810px)
-{
-//  .sidebar__content				{ top: 50px; position: fixed !important; }
-}
-
 
 

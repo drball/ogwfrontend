@@ -2,14 +2,14 @@
 
     <div class="col-xs-3 col-sm-12">
         <a href="#">
-            <img src="images/game-image.jpg" class="img-responsive game-image" alt="game">
+            <img src="images/game-image.jpg" class="img-responsive game-image nav-sidebar__game-title" alt="game">
         </a>
     </div>
 
     <div class="col-xs-9 col-sm-12">
 
 
-        <h2 class="game-title text-center"><a href="#">JMC Blue Dwarf</a></h2>
+        <h2 class="sidebar__game-title text-center"><a href="#">JMC Blue Dwarf</a></h2>
 
 <!--        <div class="game-description">-->
 <!--            <h3>Description:</h3>-->
@@ -17,7 +17,7 @@
 <!--        </div>-->
 
 
-        <ul class="nav nav-sidebar nav-sidebar--game-nav">
+        <ul class="nav nav-sidebar">
             <li class="active"><a href="#">View Posts </a></li>
             <li><a href="#">Characters </a></li>
             <li><a href="#">Members </a></li>

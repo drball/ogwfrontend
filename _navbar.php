@@ -1,5 +1,5 @@
 
-<div class="navbar navbar-inverse container-wrapper" role="navigation">
+<div class="navbar container-wrapper" role="navigation">
 
     <div class="container-fluid">
 
