@@ -2,7 +2,7 @@
 
     <div class="col-xs-3 col-sm-12">
         <a href="#">
-            <img src="images/game-image.jpg" class="img-responsive game-image nav-sidebar__game-title" alt="game">
+            <img src="images/game-image.jpg" class="img-responsive game-image sidebar__game-img" alt="game">
         </a>
     </div>
 

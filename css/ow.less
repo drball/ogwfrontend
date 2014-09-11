@@ -13,9 +13,10 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
 .main-content-wrapper   {  }
 .main-content-wrapper .container-fluid   { overflow:hidden; }
 .navbar                 { margin:0; background:@bg-navbar; }
-.sidebar                { background:@light-bg; z-index:100; }
-.secondary              { padding-left:20px; }
+.sidebar                { background:@light-bg; z-index:100; padding-top:15px; }
+.secondary              {  }
 .main                   { background:@light-bg; z-index:200; padding-bottom:15px; padding-top: 20px; }
+.main__content          { padding-bottom:15px; }
 .footer                 { background: @bg-navbar; padding:15px 0; }
 .footer-bar             { background:#000; }
 
@@ -28,13 +29,13 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
 @media (min-width: @screen-md-min) {
 
   .main             { padding-bottom:5000px; margin-bottom:-5000px; /* force infinitely tall columns*/ }
-  .secondary        { padding-right:0; }
+  .secondary        { padding-right:0; padding-left:20px; }
 }
 
 @media (min-width: 1300px) {
 
-  .container-fluid { width:1300px; }
-  .footer .container-fluid    { width:1300px; }
+  .container-fluid { width:1260px; }
+  .footer .container-fluid    { width:1260px; }
 }
 
 .hide-overflow { overflow:hidden; }
@@ -55,15 +56,16 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
     margin-top:80px; /* To match the offset */
   }
 
-  .game-layout .secondary {
-    margin-top:75px; /* To match the offset */
-  }
-
   .game-layout .main {
     padding-left:0;
   }
 }
 
+@media (min-width: @screen-md-min) {
+  .game-layout .secondary {
+    margin-top:80px; /* To match the offset - but not until it gets shown as a third column */
+  }
+}
 
 
 /* Navbar styles
@@ -119,6 +121,17 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
   }
 }
 
+/* Sidebar nav
+-------------------------------------------------- */
+
+.nav-sidebar                      { margin:0 0 10px -15px; }
+.nav-sidebar > li > a,
+.nav-sidebar > li > a:visited     { transition:background 200ms, color 200ms; }
+.nav-sidebar > li > a:hover,
+.nav-sidebar > li > a:active      { background: rgba(151, 168, 53, .2); color:#555; }
+.nav-sidebar > li.active > a,
+.nav-sidebar > li.active > a:visited  { background: #97A835; color:#fff; }
+
 
 /* Global styles
 -------------------------------------------------- */
@@ -146,6 +159,10 @@ a:active  { color:@contrasting-brand; text-decoration: underline; }
 .btn:active {
   background:@light-brand;
   color:#fff;
+}
+
+.main__content h1:first-of-type {
+  margin-top:0;
 }
 
 /* Shared components between layouts
@@ -232,66 +249,14 @@ a:active  { color:@contrasting-brand; text-decoration: underline; }
 
 /* Specific layouts
 -------------------------------------------------- */
-@import 'layout-games';
 
 
 
-/* Game info col styles
--------------------------------------------------- */
-
-.sidebar {
-  padding-top:15px;
-}
-
-@media (min-width: @screen-sm-min) {
-  .sidebar {
-
-  }
-}
-
-.sidebar__game-title   { font-size:1.5em; font-weight: bold; margin:10px 0; }
-.sidebar__game-title a,
-.sidebar__game-title a:visited  { color:#666; }
-
-.sidebar__game-image   { width:100%; margin-top:19px; }
-
-.user-game-relationship               { margin:20px -23px 20px -15px; padding:10px 8px 10px 10px; }
-.user-game-relationship .user-image   { width:40px; max-width:40px; margin-right:10px; }
-
-.user-game-relationship__user-status   { margin-left:50px; }
-.user-game-relationship__new-post      { margin:10px 0 10px 50px;  }
-
-.nav-sidebar                      { margin:0 0 10px -15px; }
-.nav-sidebar > li > a,
-.nav-sidebar > li > a:visited     { transition:background 200ms, color 200ms; }
-.nav-sidebar > li > a:hover,
-.nav-sidebar > li > a:active      { background: rgba(151, 168, 53, .2); color:#555; }
-.nav-sidebar > li.active > a,
-.nav-sidebar > li.active > a:visited  { background: #97A835; color:#fff; }
 
 /* Game styles
 -------------------------------------------------- */
+@import 'layout-games';
 
 
-.game-bg-image        { margin-left:-15px; margin-right:-15px; height:60px; background-size: cover; }
-.game-bg-image--full  { height:240px; }
-
-/* Games presented elsewhere
--------------------------------------------------- */
-.game-summary-box,
-.game-summary-box:visited     { padding:10px; margin-bottom:10px; display:block;background:white; text-decoration: none;  }
-.game-summary-box:hover,
-.game-summary-box:active      { text-decoration: none; }
-.game-summary-box img         { max-width:100%; height:auto; }
-.game-summary-box__game-image   {  }
-.game-summary-box__title        { font-size:1.1em; font-weight:bold; margin-top:0.5em; margin-bottom: 0.5em; text-align:center; }
-.game-summary-box__summary p    { font-size:0.8em; margin:0; }
-
-.secondary .game-summary-box    { padding:0; background:none; margin:20px 0; }
-.secondary__content-wrapper     {  }
-
-@media (min-width: 768px) {
-  .secondary__content-wrapper     { margin-left:15px; }
-}
 
 

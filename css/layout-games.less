@@ -1,17 +1,27 @@
 @import 'variables';
 
 
+/* Game info col styles
+-------------------------------------------------- */
+
+.sidebar__game-title   { font-size:1.5em; font-weight: bold; margin:10px 0; }
+.sidebar__game-title a,
+.sidebar__game-title a:visited  { color:#666; }
+
+.sidebar__game-image   { width:100%; margin-top:19px; }
+
+
+
+
+.user-game-relationship               { margin:20px padding:10px 8px 10px 10px; }
+.user-game-relationship .user-image   { width:40px; max-width:40px; margin-right:10px; }
+
+.user-game-relationship__user-status   { margin-left:50px; }
+.user-game-relationship__new-post      { margin:10px 0 10px 50px;  }
+
 /* Game posts styles
 -------------------------------------------------- */
 .post       { font-size:1.2em; }
-
-.game-post__content a.next-post,
-.game-post__content a.prev-post       { display:block;background:grey; padding:10px; margin-bottom:20px; color:#fff; cursor: pointer; text-align: center; }
-.game-post__content a.next-post:hover,
-.game-post__content a.prev-post:hover { background: indianred; }
-
-.game-post__content a.prev-post       { position:absolute; top:0; left:-75px; width:60px; }
-.game-post__content a.next-post       { float:right; width:140px; }
 
 .post__title,
 .post h1 {
@@ -31,16 +41,21 @@
 .post__prev-post,
 .post__next-post {
 
-  display:block;
+
 }
 
 .post__prev-post {
+  margin-top:4px;
   margin-bottom:15px;
+  display:block;
+
 }
 
 
 .post__next-post {
-
+  float:right;
+  margin-bottom:15px;
+  font-size:1.5em;
 }
 
 
@@ -93,12 +108,51 @@
     margin-right:-20px;
   }
 
-
 }
 
+/* Secondary notices
+-------------------------------------------------- */
 
-@media (min-height: 810px)
-{
-  //  .sidebar__content				{ top: 50px; position: fixed !important; }
+.notice-box {
+  color:#777;
+  display:block;
+  padding:15px;
+  margin:0 -15px 0;
+}
+
+.notice-box:hover,
+.notice-box:active {
+  color:@dark-brand-text;
+  text-decoration: none;
+  background:@bg-darkest;
+}
+
+.notice-box:hover .notice-box__title {
+  color:@dark-brand-text;
+}
+
+.notice-box__img          {  }
+.notice-box__title        { font-size:1.1em; font-weight:bold; margin-top:0.5em; margin-bottom: 0.5em; text-align:center; }
+.notice-box__info p       { font-size:0.8em; margin:0; }
+
+@media (min-width: @screen-sm-min) {
+
+  .notice-box {
+
+  }
+}
+
+@media (min-width: @screen-md-min) {
+
+  .notice-box {
+    padding:0;
+    margin:20px 0 10px;
+  }
+
+  .notice-box:hover,
+  .notice-box:active {
+    background:none;
+  }
+
 }
 

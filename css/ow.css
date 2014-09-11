@@ -19,15 +19,16 @@ body {
 .sidebar {
   background: #ffffff;
   z-index: 100;
-}
-.secondary {
-  padding-left: 20px;
+  padding-top: 15px;
 }
 .main {
   background: #ffffff;
   z-index: 200;
   padding-bottom: 15px;
   padding-top: 20px;
+}
+.main__content {
+  padding-bottom: 15px;
 }
 .footer {
   background: #c8c3ad url(../images/bg-tex-darkest.jpg);
@@ -57,14 +58,15 @@ body {
   }
   .secondary {
     padding-right: 0;
+    padding-left: 20px;
   }
 }
 @media (min-width: 1300px) {
   .container-fluid {
-    width: 1300px;
+    width: 1260px;
   }
   .footer .container-fluid {
-    width: 1300px;
+    width: 1260px;
   }
 }
 .hide-overflow {
@@ -83,12 +85,14 @@ body {
     margin-top: 80px;
     /* To match the offset */
   }
-  .game-layout .secondary {
-    margin-top: 75px;
-    /* To match the offset */
-  }
   .game-layout .main {
     padding-left: 0;
+  }
+}
+@media (min-width: 992px) {
+  .game-layout .secondary {
+    margin-top: 80px;
+    /* To match the offset - but not until it gets shown as a third column */
   }
 }
 /* Navbar styles
@@ -144,6 +148,25 @@ body {
     /* To line the columns up*/
   }
 }
+/* Sidebar nav
+-------------------------------------------------- */
+.nav-sidebar {
+  margin: 0 0 10px -15px;
+}
+.nav-sidebar > li > a,
+.nav-sidebar > li > a:visited {
+  transition: background 200ms, color 200ms;
+}
+.nav-sidebar > li > a:hover,
+.nav-sidebar > li > a:active {
+  background: rgba(151, 168, 53, 0.2);
+  color: #555;
+}
+.nav-sidebar > li.active > a,
+.nav-sidebar > li.active > a:visited {
+  background: #97A835;
+  color: #fff;
+}
 /* Global styles
 -------------------------------------------------- */
 h1,
@@ -175,6 +198,9 @@ a:active {
 .btn:active {
   background: #97a835;
   color: #fff;
+}
+.main__content h1:first-of-type {
+  margin-top: 0;
 }
 /* Shared components between layouts
 -------------------------------------------------- */
@@ -248,34 +274,41 @@ a:active {
 }
 /* Specific layouts
 -------------------------------------------------- */
+/* Game styles
+-------------------------------------------------- */
+/* Game info col styles
+-------------------------------------------------- */
+.sidebar__game-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.sidebar__game-title a,
+.sidebar__game-title a:visited {
+  color: #666;
+}
+.sidebar__game-image {
+  width: 100%;
+  margin-top: 19px;
+}
+.user-game-relationship {
+  margin: 20px padding:10px 8px 10px 10px;
+}
+.user-game-relationship .user-image {
+  width: 40px;
+  max-width: 40px;
+  margin-right: 10px;
+}
+.user-game-relationship__user-status {
+  margin-left: 50px;
+}
+.user-game-relationship__new-post {
+  margin: 10px 0 10px 50px;
+}
 /* Game posts styles
 -------------------------------------------------- */
 .post {
   font-size: 1.2em;
-}
-.game-post__content a.next-post,
-.game-post__content a.prev-post {
-  display: block;
-  background: grey;
-  padding: 10px;
-  margin-bottom: 20px;
-  color: #fff;
-  cursor: pointer;
-  text-align: center;
-}
-.game-post__content a.next-post:hover,
-.game-post__content a.prev-post:hover {
-  background: indianred;
-}
-.game-post__content a.prev-post {
-  position: absolute;
-  top: 0;
-  left: -75px;
-  width: 60px;
-}
-.game-post__content a.next-post {
-  float: right;
-  width: 140px;
 }
 .post__title,
 .post h1 {
@@ -286,12 +319,15 @@ a:active {
   margin: 0 15px 15px 0;
   width: 120px;
 }
-.post__prev-post,
-.post__next-post {
+.post__prev-post {
+  margin-top: 4px;
+  margin-bottom: 15px;
   display: block;
 }
-.post__prev-post {
+.post__next-post {
+  float: right;
   margin-bottom: 15px;
+  font-size: 1.5em;
 }
 .post .last-post-panel {
   background: #28a4c9;
@@ -338,103 +374,41 @@ a:active {
     margin-right: -20px;
   }
 }
-/* Game info col styles
+/* Secondary notices
 -------------------------------------------------- */
-.sidebar {
-  padding-top: 15px;
-}
-.sidebar__game-title {
-  font-size: 1.5em;
-  font-weight: bold;
-  margin: 10px 0;
-}
-.sidebar__game-title a,
-.sidebar__game-title a:visited {
-  color: #666;
-}
-.sidebar__game-image {
-  width: 100%;
-  margin-top: 19px;
-}
-.user-game-relationship {
-  margin: 20px -23px 20px -15px;
-  padding: 10px 8px 10px 10px;
-}
-.user-game-relationship .user-image {
-  width: 40px;
-  max-width: 40px;
-  margin-right: 10px;
-}
-.user-game-relationship__user-status {
-  margin-left: 50px;
-}
-.user-game-relationship__new-post {
-  margin: 10px 0 10px 50px;
-}
-.nav-sidebar {
-  margin: 0 0 10px -15px;
-}
-.nav-sidebar > li > a,
-.nav-sidebar > li > a:visited {
-  transition: background 200ms, color 200ms;
-}
-.nav-sidebar > li > a:hover,
-.nav-sidebar > li > a:active {
-  background: rgba(151, 168, 53, 0.2);
-  color: #555;
-}
-.nav-sidebar > li.active > a,
-.nav-sidebar > li.active > a:visited {
-  background: #97A835;
-  color: #fff;
-}
-/* Game styles
--------------------------------------------------- */
-.game-bg-image {
-  margin-left: -15px;
-  margin-right: -15px;
-  height: 60px;
-  background-size: cover;
-}
-.game-bg-image--full {
-  height: 240px;
-}
-/* Games presented elsewhere
--------------------------------------------------- */
-.game-summary-box,
-.game-summary-box:visited {
-  padding: 10px;
-  margin-bottom: 10px;
+.notice-box {
+  color: #777;
   display: block;
-  background: white;
+  padding: 15px;
+  margin: 0 -15px 0;
+}
+.notice-box:hover,
+.notice-box:active {
+  color: #527234;
   text-decoration: none;
+  background: #c8c3ad url(../images/bg-tex-darkest.jpg);
 }
-.game-summary-box:hover,
-.game-summary-box:active {
-  text-decoration: none;
+.notice-box:hover .notice-box__title {
+  color: #527234;
 }
-.game-summary-box img {
-  max-width: 100%;
-  height: auto;
-}
-.game-summary-box__title {
+.notice-box__title {
   font-size: 1.1em;
   font-weight: bold;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   text-align: center;
 }
-.game-summary-box__summary p {
+.notice-box__info p {
   font-size: 0.8em;
   margin: 0;
 }
-.secondary .game-summary-box {
-  padding: 0;
-  background: none;
-  margin: 20px 0;
-}
-@media (min-width: 768px) {
-  .secondary__content-wrapper {
-    margin-left: 15px;
+@media (min-width: 992px) {
+  .notice-box {
+    padding: 0;
+    margin: 20px 0 10px;
+  }
+  .notice-box:hover,
+  .notice-box:active {
+    background: none;
   }
 }
