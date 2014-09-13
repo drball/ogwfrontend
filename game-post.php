@@ -5,12 +5,31 @@
 <div class="stripe">
 
     <div class="container-fluid">
-        <button class="btn btn-primary">sdsd</button>
+
+        <div class="row">
+            <div class="col-md-10">
+                <div class="top-game-options">
+<!--                    <a href="" class="top-game-options__join btn btn-primary">Join now</a> <a href="">or read from the beginning</a>-->
+                    <a href="" class="btn btn-default" ><i class="glyphicon glyphicon-cog"></i></a>
+
+                </div>
+            </div>
+        </div>
+
+        <button type="button" class="sidecol-toggle collapsed" data-toggle="collapse" data-target=".sidebar__content">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
     </div>
 
 </div>
 
+
+
 <div class="main-content-wrapper game-layout">
+
 
     <div class="container-fluid main-container">
 
@@ -23,6 +42,8 @@
             </div>
 
             <div class="col-xs-12 col-sm-9 col-md-7 main post">
+
+
 
                 <div class="main__content">
 
@@ -70,17 +91,15 @@
 
                     <p>A pint 'o mild breadcake ah'll gi' thee a thick ear. Nobbut a lad mardy bum bobbar that's champion. Michael palin. Will 'e 'eckerslike face like a slapped arse michael palin ah'll learn thi. T'foot o' our stairs. Bloomin' 'eck is that thine ah'll gi' thee a thick ear soft southern pansy. Wacken thi sen up how much breadcake bobbar. Cack-handed. Is that thine ah'll learn thi eeh nobbut a lad. Nobbut a lad dahn t'coil oil breadcake. Face like a slapped arse. Aye. Mardy bum appens as maybe a pint 'o mild ne'ermind ey up nay lad. Tha knows michael palin is that thine th'art nesh thee ah'll gi' thee a thick ear.</p>
 
-                    <p>Soft lad mardy bum any rooad appens as maybe bloomin' 'eck where there's muck there's brass. Breadcake. Bobbar tell thi summat for nowt shurrup. Where's tha bin. Bloomin' 'eck god's own county. Chuffin' nora ah'll gi' thee a thick ear aye that's champion shu' thi gob. Gerritetten. Wacken thi sen up gerritetten ey up bloomin' 'eck be reet. Mardy bum aye tintintin god's own county face like a slapped arse gerritetten. Ah'll gi' thee a thick ear tha daft apeth nay lad bobbar god's own county ey up. Where's tha bin wacken thi sen up gi' o'er tell thi summat for nowt bobbar gi' o'er. Aye bloomin' 'eck sup wi' 'im cack-handed will 'e 'eckerslike.</p>
+                    <p>Soft lad <a href="">mardy bum any rooad appens as maybe bloomin' 'eck where</a> there's muck there's brass. Breadcake. Bobbar tell thi summat for nowt shurrup. Where's tha bin. Bloomin' 'eck god's own county. Chuffin' nora ah'll gi' thee a thick ear aye that's champion shu' thi gob. Gerritetten. Wacken thi sen up gerritetten ey up bloomin' 'eck be reet. Mardy bum aye tintintin god's own county face like a slapped arse gerritetten. Ah'll gi' thee a thick ear tha daft apeth nay lad bobbar god's own county ey up. Where's tha bin wacken thi sen up gi' o'er tell thi summat for nowt bobbar gi' o'er. Aye bloomin' 'eck sup wi' 'im cack-handed will 'e 'eckerslike.</p>
 
                     <p>Cack-handed wacken thi sen up chuffin' nora. Nay lad god's own county. Any rooad nay lad by 'eck god's own county be reet. Where's tha bin soft southern pansy. Eeh. Ne'ermind tell thi summat for nowt. Michael palin shu' thi gob any rooad tintintin. God's own county eeh by 'eck breadcake ah'll gi' thi summat to rooer abaht. Nobbut a lad. Be reet nah then.</p>
 
                     <p>Soft lad mardy bum any rooad appens as maybe bloomin' 'eck where there's muck there's brass. Breadcake. Bobbar tell thi summat for nowt shurrup. Where's tha bin. Bloomin' 'eck god's own county. Chuffin' nora ah'll gi' thee a thick ear aye that's champion shu' thi gob. Gerritetten. Wacken thi sen up gerritetten ey up bloomin' 'eck be reet. Mardy bum aye tintintin god's own county face like a slapped arse gerritetten. Ah'll gi' thee a thick ear tha daft apeth nay lad bobbar god's own county ey up. Where's tha bin wacken thi sen up gi' o'er tell thi summat for nowt bobbar gi' o'er. Aye bloomin' 'eck sup wi' 'im cack-handed will 'e 'eckerslike.</p>
 
                     <p>Cack-handed wacken thi sen up chuffin' nora. Nay lad god's own county. Any rooad nay lad by 'eck god's own county be reet. Where's tha bin soft southern pansy. Eeh. Ne'ermind tell thi summat for nowt. Michael palin shu' thi gob any rooad tintintin. God's own county eeh by 'eck breadcake ah'll gi' thi summat to rooer abaht. Nobbut a lad. Be reet nah then.</p>
-
 
                     <a class="btn btn-lg post__next-post">Next post &gt;</a>
-
 
 
                     <!--                    <div class="last-post-panel">-->
@@ -94,9 +113,7 @@
                     <!--                            </div>-->
                     <!--                        </div>-->
                     <!--                    </div>-->
-
                 </div>
-
 
             </div>
 

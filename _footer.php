@@ -9,12 +9,12 @@
             </div>
 
             <div class="col-sm-7 col-md-4">
-                <div id="blog-feed">
+                <div class="blog-feed">
                     <h3><a href="http://www.ongoingworlds.com/blog">OngoingWorlds Blog <span class="offscreen">for play-by-post roleplayers</span></a></h3>
                     <script src="http://feeds.feedburner.com/ongoingworlds?format=sigpro" type="text/javascript" ></script>
                     <noscript><p>Subscribe to Ongoingworlds Blog RSS updates from: <a href="http://feeds.feedburner.com/ongoingworlds"></a></p></noscript>
 
-                    <div id="affiliate-links">
+                    <div class="affiliate-links">
                         <h3 class="hidden">Affiliate links</h3>
                         <a href="http://www.rpg-directory.com/" target="_blank"><img src="http://rpg-directory.com/images/affiliate.png" alt="RPG-D" title="RPG-Directory" border="0"></a>
                     </div>
@@ -22,22 +22,22 @@
             </div>
 
             <div class="col-sm-12 col-md-4">
-                <div id="twitterfeed">
-                    <div class="speechbubble">
-                        <h3>Some useful articles</h3>
+                <div class="blog-links">
 
-                        <ul>
-                            <li><a href="http://www.ongoingworlds.com/blog/2014/01/mikes-beginners-guide-to-roleplaying-making-an-awesome-game/">Beginner's guide to making an awesome game</a></li>
-                            <li><a href="http://www.ongoingworlds.com/blog/2013/02/approving-declining-roleplay-members/">Approving & declining members [VIDEO]</a></li>
-                            <li><a href="http://www.ongoingworlds.com/blog/2013/07/disown-adopt-characters/">Disown & adopt characters [VIDEO]</a></li>
-                            <li><a href="http://www.ongoingworlds.com/blog/2014/01/advertise-your-roleplaying-game-without-ramming-down-peoples-throats/">Advertise your game</a></li>
-                            <li><a href="http://www.ongoingworlds.com/blog/2013/08/story-summaries-for-roleplaying-games-over-100-posts/">Story summaries for games with over 100 posts</a></li>
-                            <li><a href="http://www.ongoingworlds.com/blog/2014/01/new-chat-box-rules/">Tib's chat box rules</a></li>
-                        </ul>
-                    </div>
+                    <h3>Some useful articles</h3>
 
-                    <a href="http://twitter.com/ongoingworlds" id="twitter-link" title="Twitter">Follow us on Twitter</a>
+                    <ul>
+                        <li><a href="http://www.ongoingworlds.com/blog/2014/01/mikes-beginners-guide-to-roleplaying-making-an-awesome-game/">Beginner's guide to making an awesome game</a></li>
+                        <li><a href="http://www.ongoingworlds.com/blog/2013/02/approving-declining-roleplay-members/">Approving & declining members [VIDEO]</a></li>
+                        <li><a href="http://www.ongoingworlds.com/blog/2013/07/disown-adopt-characters/">Disown & adopt characters [VIDEO]</a></li>
+                        <li><a href="http://www.ongoingworlds.com/blog/2014/01/advertise-your-roleplaying-game-without-ramming-down-peoples-throats/">Advertise your game</a></li>
+                        <li><a href="http://www.ongoingworlds.com/blog/2013/08/story-summaries-for-roleplaying-games-over-100-posts/">Story summaries for games with over 100 posts</a></li>
+                        <li><a href="http://www.ongoingworlds.com/blog/2014/01/new-chat-box-rules/">Tib's chat box rules</a></li>
+                    </ul>
                 </div>
+
+                <a href="http://twitter.com/ongoingworlds" class="twitter-link" title="Twitter">Follow us on Twitter</a>
+
             </div>
         </div>
     </div>
@@ -45,9 +45,9 @@
 
 </footer>
 
-<div id="copy-area">
+<div class="copy-area">
     <div class="container-fluid">
-        <p class="text-muted createdby">Created by <a href="http://www.facebook.com/drball">David Ball</a></p>
+        <p class="text-muted copy-area__createdby">Created by <a href="http://www.facebook.com/drball">David Ball</a></p>
 
         <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#">What is OngoingWorlds?</a></li>

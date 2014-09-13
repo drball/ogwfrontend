@@ -1,16 +1,55 @@
 @import 'variables';
 
+/* Game options - That appear in the stripe at the top of the screen
+-------------------------------------------------- */
+.top-game-options   {
+  position:absolute;
+  top:9px;
+  right:60px;
+}
+.top-game-options__join   {
+
+}
+
+@media (min-width: @screen-sm-min) {
+  .top-game-options {
+    top:20px;
+    right:0;
+  }
+
+}
+
 
 /* Game info col styles
 -------------------------------------------------- */
 
-.sidebar__game-title   { font-size:1.5em; font-weight: bold; margin:10px 0; }
+.sidebar__game-title   {
+  font-size:1.7em;
+  font-weight: bold;
+  margin:10px 0 10px;
+}
 .sidebar__game-title a,
 .sidebar__game-title a:visited  { color:#666; }
 
-.sidebar__game-image   { width:100%; margin-top:19px; }
 
 
+.sidebar__game-img   {
+  display:none;
+  margin-bottom:10px;
+}
+
+
+@media (min-width: @screen-sm-min) {
+  .sidebar__game-img {
+    display:block;
+    margin:0 15px 0;
+  }
+
+  .sidebar__game-img__title {
+    display:none;
+  }
+
+}
 
 
 .user-game-relationship               { margin:20px padding:10px 8px 10px 10px; }
@@ -26,6 +65,10 @@
 .post__title,
 .post h1 {
   margin-top:0;
+}
+
+.post .btn {
+  text-decoration: none;
 }
 
 .post__author-wrapper {

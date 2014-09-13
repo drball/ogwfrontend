@@ -1,21 +1,18 @@
-<div class="row sidebar__content">
 
-    <div class="col-xs-3 col-sm-12">
-        <a href="#">
-            <img src="images/game-image.jpg" class="img-responsive game-image sidebar__game-img" alt="game">
-        </a>
-    </div>
 
-    <div class="col-xs-9 col-sm-12">
+<div class="row sidebar__content collapse">
 
+
+    <a href="#" class="sidebar__game-img">
+        <img src="images/game-image.jpg" class="img-responsive game-img" alt="game">
+    </a>
+
+
+
+
+    <div class="col-xs-12 ">
 
         <h2 class="sidebar__game-title text-center"><a href="#">JMC Blue Dwarf</a></h2>
-
-<!--        <div class="game-description">-->
-<!--            <h3>Description:</h3>-->
-<!--            <p>Adventures based in the many worlds possible in Dungeons & Dragons where players... <a href="#">More</a> </p>-->
-<!--        </div>-->
-
 
         <ul class="nav nav-sidebar">
             <li class="active"><a href="#">View Posts </a></li>
@@ -76,6 +73,12 @@
                 <br> 1 day ago</p>
 
         </div>
+
+
+        <p>sdsdsds</p>
+
     </div>
+
+
 
 </div>

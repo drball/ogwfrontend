@@ -13,7 +13,7 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
 .main-content-wrapper   {  }
 .main-content-wrapper .container-fluid   { overflow:hidden; }
 .navbar                 { margin:0; background:@bg-navbar; }
-.sidebar                { background:@light-bg; z-index:100; padding-top:15px; }
+.sidebar                { background:@light-bg; z-index:100;  }
 .secondary              {  }
 .main                   { background:@light-bg; z-index:200; padding-bottom:15px; padding-top: 20px; }
 .main__content          { padding-bottom:15px; }
@@ -21,9 +21,9 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
 .footer-bar             { background:#000; }
 
 @media (min-width: @screen-sm-min) {
-  .sidebar             {  padding-bottom:5000px; margin-bottom:-5000px; }/* force infinitely tall columns*/
+  .sidebar             { padding-top:15px; padding-bottom:5000px; margin-bottom:-5000px; }/* force infinitely tall columns*/
   .navbar              { border-radius:0; }
-  .main-container      { width:98%; }
+  .container-fluid     { width:98%; }
 }
 
 @media (min-width: @screen-md-min) {
@@ -104,14 +104,28 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
 .footer__facebook-box       { text-align: center; }
 .footer__facebook-box iframe  { background:#fff; }
 
+.footer h3 { margin-top:0; font-weight: bold; font-size: 1.2em; }
 
-#copy-area                  { height:50px; background:#000; color:#fff; }
-#copy-area .createdby       { float:left; display: inline-block; margin: 10px 0; }
-#copy-area .navbar-nav      {  }
+.copy-area                  { background:#000; color:#fff; }
+.copy-area__createdby       { float:left; display: none; margin: 10px 0; }
+.copy-area .navbar-nav      {  }
+.copy-area a,
+.copy-area a:visited { color:#ccc; }
+.copy-area a:hover,
+.copy-area a:active { color:@dark-brand-text; }
+
 
 @media (min-width: @screen-sm-min) {
   .footer__facebook-box {
     text-align:left;
+  }
+
+  .copy-area__createdby {
+    display:inline-block;
+  }
+
+  .copy-area {
+    height:50px;
   }
 }
 
@@ -121,16 +135,61 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
   }
 }
 
+/* Footer - Blog feed styles
+-------------------------------------------------- */
+.blog-feed {}
+.blog-feed .feedTitle,
+.blog-feed #creditfooter { display:none; }
+
+
+/* Sidebar content
+-------------------------------------------------- */
+.sidebar__content {}
+
+.sidecol-toggle {
+  /* Button for toggling the sidecol on or off on mobile */
+  background:#fff;
+  margin:0;
+  padding:10px;
+  border:none;
+}
+
+.sidecol-toggle .icon-bar {
+  display:block;
+  width:22px;
+  height:3px;
+  border-radius:1px;
+  background:#777;
+  margin-top:4px;
+}
+
+@media (min-width: @screen-sm-min) {
+  .sidebar__content {
+    display:block;
+  }
+
+  .sidecol-toggle {
+    display:none;
+  }
+}
+
+
 /* Sidebar nav
 -------------------------------------------------- */
 
-.nav-sidebar                      { margin:0 0 10px -15px; }
+.nav-sidebar                      { margin:0 0 10px 0; }
 .nav-sidebar > li > a,
 .nav-sidebar > li > a:visited     { transition:background 200ms, color 200ms; }
 .nav-sidebar > li > a:hover,
 .nav-sidebar > li > a:active      { background: rgba(151, 168, 53, .2); color:#555; }
 .nav-sidebar > li.active > a,
 .nav-sidebar > li.active > a:visited  { background: #97A835; color:#fff; }
+
+@media (min-width: @screen-sm-min) {
+  .nav-sidebar {
+    margin:0 0 10px -15px;
+  }
+}
 
 
 /* Global styles
@@ -144,7 +203,7 @@ h3          { color:#666; }
 
 .user-image         { max-width:100%; height:auto; }
 
-a         { color:@dark-brand-text; }
+a         { color:@dark-brand-text;  }
 a:hover,
 a:active  { color:@contrasting-brand; text-decoration: underline; }
 
@@ -154,6 +213,9 @@ a:active  { color:@contrasting-brand; text-decoration: underline; }
   background:@bg-darkest;
   border-radius:0;
   font-weight: bold;
+  border:none;
+  text-shadow:none;
+  color:@dark-brand-text;
 }
 .btn:hover,
 .btn:active {
@@ -161,8 +223,18 @@ a:active  { color:@contrasting-brand; text-decoration: underline; }
   color:#fff;
 }
 
+.offscreen { height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px; }
+
+/* Main content
+-------------------------------------------------- */
+
 .main__content h1:first-of-type {
   margin-top:0;
+}
+
+.main__content a,
+.main__content a:visited {
+  text-decoration: underline;
 }
 
 /* Shared components between layouts
@@ -171,19 +243,51 @@ a:active  { color:@contrasting-brand; text-decoration: underline; }
   background:#56742A url(http://img1.wikia.nocookie.net/__cb20090923083723/finalfantasy/images/7/78/Fortress_-_FFXII_Judge_and_Floating_Rocks.jpg);
   background-size:cover;
   background-position-y: center;
-  padding:20px 0;
+  padding:0;
   color:#fff;
   -webkit-transition: all 500ms linear;
   transition: all 500ms linear;
+  position:relative;
+  height:50px;
+}
+
+.stripe a,
+.stripe a:visited {
+  color:#eee;
+  text-shadow:1px 1px 2px #000;
+}
+
+.stripe a:hover,
+.stripe a:active {
+  color:#fff;
+}
+
+.stripe a.btn {
+  text-shadow:none;
+  color:#555;
+  box-shadow:1px 1px 3px #000;
+}
+
+.stripe a.btn:hover {
+  color:#fff;
+}
+
+.stripe .sidecol-toggle {
+  position:absolute;
+  bottom:0;
+  right:10px;
 }
 
 @media (min-width: @screen-sm-min) {
   .stripe {
-    padding:30px 0;
     border-bottom:5px solid @dark-brand;
     height:100px;
   }
+
+
 }
+
+
 
 
 .main-title,

@@ -19,7 +19,6 @@ body {
 .sidebar {
   background: #ffffff;
   z-index: 100;
-  padding-top: 15px;
 }
 .main {
   background: #ffffff;
@@ -39,6 +38,7 @@ body {
 }
 @media (min-width: 768px) {
   .sidebar {
+    padding-top: 15px;
     padding-bottom: 5000px;
     margin-bottom: -5000px;
   }
@@ -46,7 +46,7 @@ body {
   .navbar {
     border-radius: 0;
   }
-  .main-container {
+  .container-fluid {
     width: 98%;
   }
 }
@@ -127,19 +127,37 @@ body {
 .footer__facebook-box iframe {
   background: #fff;
 }
-#copy-area {
-  height: 50px;
+.footer h3 {
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.copy-area {
   background: #000;
   color: #fff;
 }
-#copy-area .createdby {
+.copy-area__createdby {
   float: left;
-  display: inline-block;
+  display: none;
   margin: 10px 0;
+}
+.copy-area a,
+.copy-area a:visited {
+  color: #ccc;
+}
+.copy-area a:hover,
+.copy-area a:active {
+  color: #527234;
 }
 @media (min-width: 768px) {
   .footer__facebook-box {
     text-align: left;
+  }
+  .copy-area__createdby {
+    display: inline-block;
+  }
+  .copy-area {
+    height: 50px;
   }
 }
 @media (min-width: 1300px) {
@@ -148,10 +166,41 @@ body {
     /* To line the columns up*/
   }
 }
+/* Footer - Blog feed styles
+-------------------------------------------------- */
+.blog-feed .feedTitle,
+.blog-feed #creditfooter {
+  display: none;
+}
+/* Sidebar content
+-------------------------------------------------- */
+.sidecol-toggle {
+  /* Button for toggling the sidecol on or off on mobile */
+  background: #fff;
+  margin: 0;
+  padding: 10px;
+  border: none;
+}
+.sidecol-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 3px;
+  border-radius: 1px;
+  background: #777;
+  margin-top: 4px;
+}
+@media (min-width: 768px) {
+  .sidebar__content {
+    display: block;
+  }
+  .sidecol-toggle {
+    display: none;
+  }
+}
 /* Sidebar nav
 -------------------------------------------------- */
 .nav-sidebar {
-  margin: 0 0 10px -15px;
+  margin: 0 0 10px 0;
 }
 .nav-sidebar > li > a,
 .nav-sidebar > li > a:visited {
@@ -166,6 +215,11 @@ body {
 .nav-sidebar > li.active > a:visited {
   background: #97A835;
   color: #fff;
+}
+@media (min-width: 768px) {
+  .nav-sidebar {
+    margin: 0 0 10px -15px;
+  }
 }
 /* Global styles
 -------------------------------------------------- */
@@ -193,14 +247,30 @@ a:active {
   background: #c8c3ad url(../images/bg-tex-darkest.jpg);
   border-radius: 0;
   font-weight: bold;
+  border: none;
+  text-shadow: none;
+  color: #527234;
 }
 .btn:hover,
 .btn:active {
   background: #97a835;
   color: #fff;
 }
+.offscreen {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+}
+/* Main content
+-------------------------------------------------- */
 .main__content h1:first-of-type {
   margin-top: 0;
+}
+.main__content a,
+.main__content a:visited {
+  text-decoration: underline;
 }
 /* Shared components between layouts
 -------------------------------------------------- */
@@ -208,14 +278,37 @@ a:active {
   background: #56742a url(http://img1.wikia.nocookie.net/__cb20090923083723/finalfantasy/images/7/78/Fortress_-_FFXII_Judge_and_Floating_Rocks.jpg);
   background-size: cover;
   background-position-y: center;
-  padding: 20px 0;
+  padding: 0;
   color: #fff;
   -webkit-transition: all 500ms linear;
   transition: all 500ms linear;
+  position: relative;
+  height: 50px;
+}
+.stripe a,
+.stripe a:visited {
+  color: #eee;
+  text-shadow: 1px 1px 2px #000;
+}
+.stripe a:hover,
+.stripe a:active {
+  color: #fff;
+}
+.stripe a.btn {
+  text-shadow: none;
+  color: #555;
+  box-shadow: 1px 1px 3px #000;
+}
+.stripe a.btn:hover {
+  color: #fff;
+}
+.stripe .sidecol-toggle {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
 }
 @media (min-width: 768px) {
   .stripe {
-    padding: 30px 0;
     border-bottom: 5px solid #56742a;
     height: 100px;
   }
@@ -276,20 +369,42 @@ a:active {
 -------------------------------------------------- */
 /* Game styles
 -------------------------------------------------- */
+/* Game options - That appear in the stripe at the top of the screen
+-------------------------------------------------- */
+.top-game-options {
+  position: absolute;
+  top: 9px;
+  right: 60px;
+}
+@media (min-width: 768px) {
+  .top-game-options {
+    top: 20px;
+    right: 0;
+  }
+}
 /* Game info col styles
 -------------------------------------------------- */
 .sidebar__game-title {
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 10px 0 10px;
 }
 .sidebar__game-title a,
 .sidebar__game-title a:visited {
   color: #666;
 }
-.sidebar__game-image {
-  width: 100%;
-  margin-top: 19px;
+.sidebar__game-img {
+  display: none;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .sidebar__game-img {
+    display: block;
+    margin: 0 15px 0;
+  }
+  .sidebar__game-img__title {
+    display: none;
+  }
 }
 .user-game-relationship {
   margin: 20px padding:10px 8px 10px 10px;
@@ -313,6 +428,9 @@ a:active {
 .post__title,
 .post h1 {
   margin-top: 0;
+}
+.post .btn {
+  text-decoration: none;
 }
 .post__author-wrapper {
   float: left;
