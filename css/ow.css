@@ -9,9 +9,6 @@ body {
   color: #555;
   background: #DAD5BF;
 }
-.main-content-wrapper .container-fluid {
-  overflow: hidden;
-}
 .navbar {
   margin: 0;
   background: #c8c3ad url(../images/bg-tex-darkest.jpg);
@@ -37,6 +34,10 @@ body {
   background: #000;
 }
 @media (min-width: 768px) {
+  .main-content-wrapper .container-fluid {
+    overflow: hidden;
+  }
+  /* for the infinitely tall columns */
   .sidebar {
     padding-top: 15px;
     padding-bottom: 5000px;
@@ -95,6 +96,29 @@ body {
     /* To match the offset - but not until it gets shown as a third column */
   }
 }
+/* Layouts that overlap a BIG stripe
+-------------------------------------------------- */
+@media (min-width: 768px) {
+  .game-home-layout {
+    margin-top: -180px;
+  }
+  .game-home-layout .container-fluid {
+    overflow: hidden;
+  }
+  .game-home-layout .main {
+    margin-top: 180px;
+    /* To match the offset */
+  }
+  .game-home-layout .main {
+    padding-left: 0;
+  }
+}
+@media (min-width: 992px) {
+  .game-home-layout .secondary {
+    margin-top: 180px;
+    /* To match the offset - but not until it gets shown as a third column */
+  }
+}
 /* Navbar styles
 -------------------------------------------------- */
 .navbar .container-fluid {
@@ -122,7 +146,9 @@ body {
 /* Footer styles
 -------------------------------------------------- */
 .footer__facebook-box {
+  display: none;
   text-align: center;
+  margin-bottom: 20px;
 }
 .footer__facebook-box iframe {
   background: #fff;
@@ -130,8 +156,76 @@ body {
 .footer h3 {
   margin-top: 0;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.7em;
 }
+.footer ul {
+  margin: 0;
+  padding: 0;
+}
+.footer ul li {
+  padding: 0 0 12px;
+  margin: 0;
+  font-style: normal;
+  list-style-type: none;
+}
+.footer ul li a,
+.footer ul li a:visited {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+.footer ul li a:hover,
+.footer ul li a:active {
+  padding: 0;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .footer__facebook-box {
+    display: block;
+    text-align: left;
+  }
+  .footer__title-blog {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .footer__title-help {
+    text-align: center;
+  }
+  .footer__facebook-box {
+    margin: 0;
+  }
+}
+@media (min-width: 1300px) {
+  .footer__first-col {
+    margin-left: -15px;
+    /* To line the columns up*/
+  }
+}
+/* Footer - Blog feed styles
+-------------------------------------------------- */
+.blog-feed {
+  margin-bottom: 20px;
+}
+.blog-feed .feedTitle,
+.blog-feed #creditfooter {
+  display: none;
+}
+.blog-feed ul .headline {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.blog-feed ul .date {
+  font-size: 0.85em;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .blog-feed {
+    margin: 0;
+  }
+}
+/* Copy area styles
+-------------------------------------------------- */
 .copy-area {
   background: #000;
   color: #fff;
@@ -150,27 +244,12 @@ body {
   color: #527234;
 }
 @media (min-width: 768px) {
-  .footer__facebook-box {
-    text-align: left;
-  }
   .copy-area__createdby {
     display: inline-block;
   }
   .copy-area {
     height: 50px;
   }
-}
-@media (min-width: 1300px) {
-  .footer__first-col {
-    margin-left: -15px;
-    /* To line the columns up*/
-  }
-}
-/* Footer - Blog feed styles
--------------------------------------------------- */
-.blog-feed .feedTitle,
-.blog-feed #creditfooter {
-  display: none;
 }
 /* Sidebar content
 -------------------------------------------------- */
@@ -190,7 +269,7 @@ body {
   margin-top: 4px;
 }
 @media (min-width: 768px) {
-  .sidebar__content {
+  .sidebar__optional-content {
     display: block;
   }
   .sidecol-toggle {
@@ -263,6 +342,23 @@ a:active {
   overflow: hidden;
   top: -10px;
 }
+.external-link:after {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Glyphicons Halflings';
+  content: "\e144";
+  font-size: 0.7em;
+  color: #777;
+}
+.date:before {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Glyphicons Halflings';
+  content: "\e023";
+  font-size: 0.9em;
+  color: #777;
+  margin-right: 5px;
+}
 /* Main content
 -------------------------------------------------- */
 .main__content h1:first-of-type {
@@ -272,7 +368,13 @@ a:active {
 .main__content a:visited {
   text-decoration: underline;
 }
+.main__content a.btn,
+.main__content a.btn:visited {
+  text-decoration: none;
+}
 /* Shared components between layouts
+-------------------------------------------------- */
+/* The stripe
 -------------------------------------------------- */
 .stripe {
   background: #56742a url(http://img1.wikia.nocookie.net/__cb20090923083723/finalfantasy/images/7/78/Fortress_-_FFXII_Judge_and_Floating_Rocks.jpg);
@@ -313,6 +415,28 @@ a:active {
     height: 100px;
   }
 }
+/* A really tall version of the stripe, for game home
+-------------------------------------------------- */
+.stripe__text-wrapper {
+  height: 180px;
+}
+.stripe__text {
+  margin-top: 20px;
+  text-shadow: 2px 2px 3px #000;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 7px 10px;
+  position: absolute;
+  bottom: 0;
+}
+.stripe__text p:last-of-type {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .stripe--tall {
+    height: 200px;
+  }
+}
+/* Title in the stripe */
 .main-title,
 .main-title--avoid-logo {
   color: #fff;
@@ -331,6 +455,11 @@ a:active {
     margin-left: 150px;
   }
 }
+/* Title in the main bit */
+.main .main-title {
+  margin-top: 0;
+}
+/* Monster logo */
 .logo-monster,
 .logo-monster--medium {
   width: 66px;
@@ -365,6 +494,44 @@ a:active {
     width: 311px;
   }
 }
+/* Secondary notices - right col
+-------------------------------------------------- */
+.notice-box {
+  color: #777;
+  display: block;
+  padding: 15px;
+  margin: 0 -15px 0;
+}
+.notice-box:hover,
+.notice-box:active {
+  color: #527234;
+  text-decoration: none;
+  background: #c8c3ad url(../images/bg-tex-darkest.jpg);
+}
+.notice-box:hover .notice-box__title {
+  color: #527234;
+}
+.notice-box__title {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+.notice-box__info p {
+  font-size: 0.8em;
+  margin: 0;
+}
+@media (min-width: 992px) {
+  .notice-box {
+    padding: 0;
+    margin: 20px 0 10px;
+  }
+  .notice-box:hover,
+  .notice-box:active {
+    background: none;
+  }
+}
 /* Specific layouts
 -------------------------------------------------- */
 /* Game styles
@@ -387,23 +554,41 @@ a:active {
 .sidebar__game-title {
   font-size: 1.7em;
   font-weight: bold;
-  margin: 10px 0 10px;
+  display: inline-block;
+  margin: 0;
+  text-align: left;
 }
 .sidebar__game-title a,
 .sidebar__game-title a:visited {
   color: #666;
 }
+.sidebar__content {
+  border-bottom: 1px dotted #97a835;
+}
 .sidebar__game-img {
-  display: none;
   margin-bottom: 10px;
+  width: 70px;
+  display: inline-block;
+  border: 5px solid #fff;
+  margin-top: -10px;
+  margin-left: 12px;
+  vertical-align: middle;
 }
 @media (min-width: 768px) {
   .sidebar__game-img {
     display: block;
     margin: 0 15px 0;
+    width: auto;
+    border: none;
   }
-  .sidebar__game-img__title {
-    display: none;
+  .sidebar__game-title {
+    padding: 0 15px;
+    margin: 10px 0 10px;
+    text-align: center;
+    display: block;
+  }
+  .sidebar__content {
+    border: none;
   }
 }
 .user-game-relationship {
@@ -492,41 +677,61 @@ a:active {
     margin-right: -20px;
   }
 }
-/* Secondary notices
+/* Post summaries (game homepage and game > posts)
 -------------------------------------------------- */
-.notice-box {
-  color: #777;
-  display: block;
-  padding: 15px;
-  margin: 0 -15px 0;
+.post-summary {
+  clear: left;
+  margin-bottom: 20px;
+  font-size: 1.2em;
 }
-.notice-box:hover,
-.notice-box:active {
-  color: #527234;
-  text-decoration: none;
-  background: #c8c3ad url(../images/bg-tex-darkest.jpg);
+.post-summary__excerpt {
+  font-size: 0.9em;
 }
-.notice-box:hover .notice-box__title {
-  color: #527234;
-}
-.notice-box__title {
-  font-size: 1.1em;
+.post-summary__title {
   font-weight: bold;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+  margin: 0 0 5px;
 }
-.notice-box__info p {
-  font-size: 0.8em;
-  margin: 0;
+.post-summary__title a,
+.post-summary__title a:visited {
+  text-decoration: none;
 }
-@media (min-width: 992px) {
-  .notice-box {
-    padding: 0;
-    margin: 20px 0 10px;
+.post-summary__date {
+  color: #777;
+  font-size: 0.7em;
+  margin-bottom: 4px;
+  line-height: 1em;
+}
+.post-summary__date:before {
+  color: #ccc;
+}
+.post-summary__author {
+  float: left;
+  width: 45px;
+  margin: 0 5px 10px -5px;
+  display: block;
+  padding: 5px;
+  transition: background 200ms;
+  text-decoration: none;
+}
+.post-summary__author:hover {
+  background: #97a835;
+}
+@media (min-width: 768px) {
+  .post-summary {
+    margin-bottom: 16px;
   }
-  .notice-box:hover,
-  .notice-box:active {
-    background: none;
+  .post-summary__title {
+    font-size: 1.2em;
   }
+  .post-summary__author {
+    width: 64px;
+    margin: 0 10px 15px -5px;
+  }
+}
+/* Game home
+-------------------------------------------------- */
+.game-home__title {
+  margin-top: 0;
 }

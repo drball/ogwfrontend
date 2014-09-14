@@ -10,7 +10,7 @@
 
             <div class="col-sm-7 col-md-4">
                 <div class="blog-feed">
-                    <h3><a href="http://www.ongoingworlds.com/blog">OngoingWorlds Blog <span class="offscreen">for play-by-post roleplayers</span></a></h3>
+                    <h3 class="footer__title-blog"><a href="http://www.ongoingworlds.com/blog" class="external-link">OngoingWorlds Blog <span class="offscreen">for play-by-post roleplayers</span></a></h3>
                     <script src="http://feeds.feedburner.com/ongoingworlds?format=sigpro" type="text/javascript" ></script>
                     <noscript><p>Subscribe to Ongoingworlds Blog RSS updates from: <a href="http://feeds.feedburner.com/ongoingworlds"></a></p></noscript>
 
@@ -24,7 +24,7 @@
             <div class="col-sm-12 col-md-4">
                 <div class="blog-links">
 
-                    <h3>Some useful articles</h3>
+                    <h3 class="footer__title-help">Some useful articles</h3>
 
                     <ul>
                         <li><a href="http://www.ongoingworlds.com/blog/2014/01/mikes-beginners-guide-to-roleplaying-making-an-awesome-game/">Beginner's guide to making an awesome game</a></li>

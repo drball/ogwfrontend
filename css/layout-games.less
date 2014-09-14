@@ -26,16 +26,26 @@
 .sidebar__game-title   {
   font-size:1.7em;
   font-weight: bold;
-  margin:10px 0 10px;
+  display:inline-block;
+  margin:0;
+  text-align:left;
 }
 .sidebar__game-title a,
 .sidebar__game-title a:visited  { color:#666; }
 
+.sidebar__content {
+  border-bottom:1px dotted @light-brand;
+}
 
 
 .sidebar__game-img   {
-  display:none;
   margin-bottom:10px;
+  width:70px;
+  display:inline-block;
+  border:5px solid #fff;
+  margin-top:-10px;
+  margin-left:12px;
+  vertical-align:middle;
 }
 
 
@@ -43,10 +53,19 @@
   .sidebar__game-img {
     display:block;
     margin:0 15px 0;
+    width:auto;
+    border:none;
   }
 
-  .sidebar__game-img__title {
-    display:none;
+  .sidebar__game-title {
+    padding:0 15px;
+    margin:10px 0 10px;
+    text-align:center;
+    display:block;
+  }
+
+  .sidebar__content {
+    border:none;
   }
 
 }
@@ -153,49 +172,79 @@
 
 }
 
-/* Secondary notices
+/* Post summaries (game homepage and game > posts)
 -------------------------------------------------- */
 
-.notice-box {
-  color:#777;
-  display:block;
-  padding:15px;
-  margin:0 -15px 0;
+.post-summary {
+  clear:left;
+  margin-bottom:20px;
+  font-size: 1.2em;
 }
 
-.notice-box:hover,
-.notice-box:active {
-  color:@dark-brand-text;
+.post-summary__excerpt {
+  font-size:0.9em;
+}
+
+.post-summary__title {
+  font-weight:bold;
+  font-size:1em;
   text-decoration: none;
-  background:@bg-darkest;
+  margin:0 0 5px;
 }
 
-.notice-box:hover .notice-box__title {
-  color:@dark-brand-text;
+.post-summary__title a,
+.post-summary__title a:visited {
+  text-decoration: none;
 }
 
-.notice-box__img          {  }
-.notice-box__title        { font-size:1.1em; font-weight:bold; margin-top:0.5em; margin-bottom: 0.5em; text-align:center; }
-.notice-box__info p       { font-size:0.8em; margin:0; }
+.post-summary__date {
+  color:#777;
+  font-size:0.7em;
+  margin-bottom:4px;
+  line-height:1em;
+}
 
+.post-summary__date:before {
+  color:#ccc;
+}
+
+.post-summary__author {
+  float:left;
+  width:45px;
+  margin:0 5px 10px -5px;
+  display:block;
+  padding:5px;
+  transition:background 200ms;
+  text-decoration:none;
+}
+.post-summary__author:hover {
+  background:@light-brand;
+}
 @media (min-width: @screen-sm-min) {
+  .post-summary {
+    margin-bottom:16px;
+  }
 
-  .notice-box {
+  .post-summary__title {
+    font-size:1.2em;
+  }
 
+  .post-summary__author {
+     width:64px;
+     margin:0 10px 15px -5px;
   }
 }
 
 @media (min-width: @screen-md-min) {
 
-  .notice-box {
-    padding:0;
-    margin:20px 0 10px;
-  }
 
-  .notice-box:hover,
-  .notice-box:active {
-    background:none;
-  }
+
+
 
 }
 
+/* Game home
+-------------------------------------------------- */
+.game-home__title {
+  margin-top:0;
+}

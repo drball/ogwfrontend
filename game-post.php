@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <button type="button" class="sidecol-toggle collapsed" data-toggle="collapse" data-target=".sidebar__content">
+        <button type="button" class="sidecol-toggle collapsed" data-toggle="collapse" data-target=".sidebar__optional-content">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>

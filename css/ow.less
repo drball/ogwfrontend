@@ -11,7 +11,7 @@
 body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
 
 .main-content-wrapper   {  }
-.main-content-wrapper .container-fluid   { overflow:hidden; }
+
 .navbar                 { margin:0; background:@bg-navbar; }
 .sidebar                { background:@light-bg; z-index:100;  }
 .secondary              {  }
@@ -21,6 +21,7 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
 .footer-bar             { background:#000; }
 
 @media (min-width: @screen-sm-min) {
+  .main-content-wrapper .container-fluid   { overflow:hidden; } /* for the infinitely tall columns */
   .sidebar             { padding-top:15px; padding-bottom:5000px; margin-bottom:-5000px; }/* force infinitely tall columns*/
   .navbar              { border-radius:0; }
   .container-fluid     { width:98%; }
@@ -67,6 +68,32 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
   }
 }
 
+/* Layouts that overlap a BIG stripe
+-------------------------------------------------- */
+
+@media (min-width: @screen-sm-min) {
+  .game-home-layout   {
+    margin-top:-180px;
+  }
+
+  .game-home-layout .container-fluid   {
+    overflow:hidden;
+  }
+
+  .game-home-layout .main {
+    margin-top:180px; /* To match the offset */
+  }
+
+  .game-home-layout .main {
+    padding-left:0;
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .game-home-layout .secondary {
+    margin-top:180px; /* To match the offset - but not until it gets shown as a third column */
+  }
+}
 
 /* Navbar styles
 -------------------------------------------------- */
@@ -101,10 +128,63 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
 /* Footer styles
 -------------------------------------------------- */
 
-.footer__facebook-box       { text-align: center; }
+.footer__facebook-box       { display:none; text-align: center; margin-bottom:20px; }
 .footer__facebook-box iframe  { background:#fff; }
 
-.footer h3 { margin-top:0; font-weight: bold; font-size: 1.2em; }
+.footer h3 { margin-top:0; font-weight: bold; font-size: 1.7em; }
+
+.footer ul					{ margin:0; padding:0; }
+.footer ul li				{ padding:0 0 12px; margin:0; font-style:normal; list-style-type:none; }
+.footer ul li a,
+.footer ul li a:visited		{ display:inline; padding:0; margin:0; }
+.footer ul li a:hover,
+.footer ul li a:active		{ padding:0; margin:0; }
+
+.footer .blog-links {  }
+
+
+
+@media (min-width: @screen-sm-min) {
+  .footer__facebook-box {
+    display:block;
+    text-align:left;
+  }
+
+  .footer__title-blog { text-align:center; }
+
+
+}
+
+@media (min-width: @screen-md-min) {
+  .footer__title-help { text-align:center; }
+  .footer__facebook-box       { margin:0; }
+}
+
+
+
+@media (min-width: @screen-max-width) {
+  .footer__first-col {
+    margin-left:-15px;  /* To line the columns up*/
+  }
+}
+
+/* Footer - Blog feed styles
+-------------------------------------------------- */
+.blog-feed { margin-bottom:20px; }
+.blog-feed .feedTitle,
+.blog-feed #creditfooter        { display:none; }
+.blog-feed ul .headline			{ font-weight:bold; font-size:1.1em; }
+.blog-feed ul .date				{ font-size:0.85em; margin:0; }
+//.blog-feed ul .date:before      { font-family: 'Glyphicons Halflings'; content:"\e023"; display:inline-block; margin-right:2px; vertical-align:middle; color:#777; }
+
+@media (min-width: @screen-sm-min) {
+  .blog-feed { margin:0; }
+}
+
+
+/* Copy area styles
+-------------------------------------------------- */
+
 
 .copy-area                  { background:#000; color:#fff; }
 .copy-area__createdby       { float:left; display: none; margin: 10px 0; }
@@ -116,9 +196,6 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
 
 
 @media (min-width: @screen-sm-min) {
-  .footer__facebook-box {
-    text-align:left;
-  }
 
   .copy-area__createdby {
     display:inline-block;
@@ -128,18 +205,6 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
     height:50px;
   }
 }
-
-@media (min-width: @screen-max-width) {
-  .footer__first-col {
-    margin-left:-15px;  /* To line the columns up*/
-  }
-}
-
-/* Footer - Blog feed styles
--------------------------------------------------- */
-.blog-feed {}
-.blog-feed .feedTitle,
-.blog-feed #creditfooter { display:none; }
 
 
 /* Sidebar content
@@ -164,7 +229,7 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
 }
 
 @media (min-width: @screen-sm-min) {
-  .sidebar__content {
+  .sidebar__optional-content {
     display:block;
   }
 
@@ -195,11 +260,9 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
 /* Global styles
 -------------------------------------------------- */
 
-
 h1,
 h2,
 h3          { color:#666; }
-
 
 .user-image         { max-width:100%; height:auto; }
 
@@ -223,7 +286,32 @@ a:active  { color:@contrasting-brand; text-decoration: underline; }
   color:#fff;
 }
 
-.offscreen { height: 1px; width: 1px; position: absolute; overflow: hidden; top: -10px; }
+.offscreen {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  top: -10px;
+}
+
+.external-link:after {
+  display:inline-block;
+  vertical-align: middle;
+  font-family:'Glyphicons Halflings';
+  content:"\e144";
+  font-size:0.7em;
+  color:#777;
+}
+
+.date:before {
+  display:inline-block;
+  vertical-align: middle;
+  font-family:'Glyphicons Halflings';
+  content:"\e023";
+  font-size:0.9em;
+  color:#777;
+  margin-right:5px;
+}
 
 /* Main content
 -------------------------------------------------- */
@@ -237,7 +325,15 @@ a:active  { color:@contrasting-brand; text-decoration: underline; }
   text-decoration: underline;
 }
 
+.main__content a.btn,
+.main__content a.btn:visited {
+  text-decoration: none;
+}
+
 /* Shared components between layouts
+-------------------------------------------------- */
+
+/* The stripe
 -------------------------------------------------- */
 .stripe   {
   background:#56742A url(http://img1.wikia.nocookie.net/__cb20090923083723/finalfantasy/images/7/78/Fortress_-_FFXII_Judge_and_Floating_Rocks.jpg);
@@ -278,18 +374,44 @@ a:active  { color:@contrasting-brand; text-decoration: underline; }
   right:10px;
 }
 
+
+
 @media (min-width: @screen-sm-min) {
   .stripe {
     border-bottom:5px solid @dark-brand;
     height:100px;
   }
 
+}
+
+/* A really tall version of the stripe, for game home
+-------------------------------------------------- */
+
+.stripe__text-wrapper {
+  height:180px;
+}
+
+.stripe__text {
+  margin-top:20px;
+  text-shadow:2px 2px 3px #000;
+  background: rgba(0,0,0,0.5);
+  padding:7px 10px;
+  position:absolute;
+  bottom:0;
+}
+
+.stripe__text p:last-of-type {
+  margin:0;
+}
+
+@media (min-width: @screen-sm-min) {
+  .stripe--tall {
+    height:200px;
+  }
 
 }
 
-
-
-
+/* Title in the stripe */
 .main-title,
 .main-title--avoid-logo {
   color:#fff;
@@ -312,6 +434,12 @@ a:active  { color:@contrasting-brand; text-decoration: underline; }
   }
 }
 
+/* Title in the main bit */
+.main .main-title {
+  margin-top:0;
+}
+
+/* Monster logo */
 .logo-monster,
 .logo-monster--medium {
   width:66px;
@@ -327,8 +455,6 @@ a:active  { color:@contrasting-brand; text-decoration: underline; }
   .logo-monster;
   width:100px;
 }
-
-
 
 @media (min-width: @screen-sm-min) {
   .logo-monster {
@@ -347,6 +473,52 @@ a:active  { color:@contrasting-brand; text-decoration: underline; }
   }
 }
 
+
+/* Secondary notices - right col
+-------------------------------------------------- */
+
+.notice-box {
+  color:#777;
+  display:block;
+  padding:15px;
+  margin:0 -15px 0;
+}
+
+.notice-box:hover,
+.notice-box:active {
+  color:@dark-brand-text;
+  text-decoration: none;
+  background:@bg-darkest;
+}
+
+.notice-box:hover .notice-box__title {
+  color:@dark-brand-text;
+}
+
+.notice-box__img          {  }
+.notice-box__title        { font-size:1.1em; font-weight:bold; margin-top:0.5em; margin-bottom: 0.5em; text-align:center; }
+.notice-box__info p       { font-size:0.8em; margin:0; }
+
+@media (min-width: @screen-sm-min) {
+
+  .notice-box {
+
+  }
+}
+
+@media (min-width: @screen-md-min) {
+
+  .notice-box {
+    padding:0;
+    margin:20px 0 10px;
+  }
+
+  .notice-box:hover,
+  .notice-box:active {
+    background:none;
+  }
+
+}
 
 
 
