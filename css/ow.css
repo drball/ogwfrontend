@@ -33,6 +33,10 @@ body {
 .footer-bar {
   background: #000;
 }
+.container-fluid {
+  position: relative;
+  height: 100%;
+}
 @media (min-width: 768px) {
   .main-content-wrapper .container-fluid {
     overflow: hidden;
@@ -154,7 +158,7 @@ body {
   background: #fff;
 }
 .footer h3 {
-  margin-top: 0;
+  margin: 5px 0 15px;
   font-weight: bold;
   font-size: 1.7em;
 }
@@ -366,6 +370,10 @@ hr {
   padding: 10px;
   background: #dad5bf;
 }
+.member {
+  display: inline-block;
+  background: #4c818f;
+}
 /* Main content
 -------------------------------------------------- */
 .main__content h1:first-of-type {
@@ -443,23 +451,25 @@ hr {
     height: 200px;
   }
 }
-/* Title in the stripe */
-.main-title,
-.main-title--avoid-logo {
-  color: #fff;
+/* Title in th stripe
+-------------------------------------------------- */
+.main-title {
+  color: #777;
   text-align: center;
   font-size: 2em;
   margin: 0;
+}
+.stripe .main-title {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  background: #fff;
+  padding: 5px 10px;
 }
 @media (min-width: 768px) {
   .main-title {
     text-align: left;
     font-size: 3em;
-  }
-  .main-title--avoid-logo {
-    text-align: left;
-    font-size: 3em;
-    margin-left: 150px;
   }
 }
 /* Title in the main bit */
@@ -477,12 +487,6 @@ hr {
   z-index: 300;
 }
 .logo-monster--large {
-  width: 66px;
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: 3px;
-  z-index: 300;
   width: 100px;
 }
 @media (min-width: 768px) {
@@ -491,13 +495,9 @@ hr {
     left: 0;
   }
   .logo-monster--medium {
-    width: 90px;
-    left: 0;
     width: 155px;
   }
   .logo-monster--large {
-    width: 90px;
-    left: 0;
     width: 311px;
   }
 }
@@ -783,4 +783,26 @@ hr {
 .post-calendar a:active {
   background: #97a835;
   color: #fff;
+}
+.game__info-box {
+  margin-bottom: 20px;
+}
+.game__info-box__title {
+  margin-top: 0;
+}
+/* Profile styles (public & private)
+-------------------------------------------------- */
+/* Profile layout - Image on right overlaps the stripe
+-------------------------------------------------- */
+@media (min-width: 768px) {
+  .public-profile-layout {
+    margin-top: -180px;
+  }
+  .public-profile-layout .container-fluid {
+    overflow: hidden;
+  }
+  .public-profile-layout .main {
+    margin-top: 180px;
+    /* To match the offset */
+  }
 }

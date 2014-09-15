@@ -19,6 +19,7 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
 .main__content          { padding-bottom:15px; }
 .footer                 { background: @bg-navbar; padding:15px 0; }
 .footer-bar             { background:#000; }
+.container-fluid        { position:relative; height: 100%; }
 
 @media (min-width: @screen-sm-min) {
   .main-content-wrapper .container-fluid   { overflow:hidden; } /* for the infinitely tall columns */
@@ -130,7 +131,7 @@ body					{ font-family: Georgia, serif; color:#555; background:#DAD5BF; }
 .footer__facebook-box       { display:none; text-align: center; margin-bottom:20px; }
 .footer__facebook-box iframe  { background:#fff; }
 
-.footer h3 { margin-top:0; font-weight: bold; font-size: 1.7em; }
+.footer h3 { margin:5px 0 15px; font-weight: bold; font-size: 1.7em; }
 
 .footer ul					{ margin:0; padding:0; }
 .footer ul li				{ padding:0 0 12px; margin:0; font-style:normal; list-style-type:none; }
@@ -320,6 +321,11 @@ hr {
   background:@bg-brand;
 }
 
+.member {
+  display:inline-block;
+  background:@contrasting-brand;
+}
+
 /* Main content
 -------------------------------------------------- */
 
@@ -382,7 +388,6 @@ hr {
 }
 
 
-
 @media (min-width: @screen-sm-min) {
   .stripe {
     border-bottom:5px solid @dark-brand;
@@ -390,6 +395,9 @@ hr {
   }
 
 }
+
+
+
 
 /* A really tall version of the stripe, for game home
 -------------------------------------------------- */
@@ -418,16 +426,22 @@ hr {
 
 }
 
-/* Title in the stripe */
-.main-title,
-.main-title--avoid-logo {
-  color:#fff;
+/* Title in th stripe
+-------------------------------------------------- */
+.main-title {
+  color:#777;
   text-align: center;
   font-size:2em;
   margin:0;
 }
 
-
+.stripe .main-title {
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  background:#fff;
+  padding:5px 10px;
+}
 
 @media (min-width: @screen-sm-min) {
   .main-title {
@@ -435,10 +449,6 @@ hr {
     font-size:3em;
   }
 
-  .main-title--avoid-logo {
-    .main-title();
-    margin-left:150px;
-  }
 }
 
 /* Title in the main bit */
@@ -459,7 +469,6 @@ hr {
 
 
 .logo-monster--large {
-  .logo-monster;
   width:100px;
 }
 
@@ -470,12 +479,10 @@ hr {
   }
 
   .logo-monster--medium {
-    .logo-monster;
      width:155px;
   }
 
   .logo-monster--large {
-    .logo-monster;
     width:311px;
   }
 }
@@ -540,6 +547,9 @@ hr {
 -------------------------------------------------- */
 @import 'layout-games';
 
+/* Profile styles (public & private)
+-------------------------------------------------- */
+@import 'layout-profile';
 
 
 

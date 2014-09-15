@@ -188,9 +188,9 @@
                             <hr>
 
                             <div class="row">
-                                <div class="col-md-6 ">
+                                <div class="col-sm-6">
                                     <div class="game__info-box">
-                                        <h3>Game Information</h3>
+                                        <h3 class="game__info-box__title">Game Information</h3>
                                         <p><strong>Created by : </strong>Kimmie13</p>
 
                                         <p><strong>Category : </strong>
@@ -211,9 +211,9 @@
 
                                 </div>
 
-                                <div class="col-md-6 ">
+                                <div class="col-sm-6 ">
                                     <div class="game__info-box">
-                                        <h3>Moderators</h3>
+                                        <h3 class="game__info-box__title">Moderators</h3>
 
                                         <ul>
 

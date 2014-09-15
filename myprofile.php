@@ -6,18 +6,18 @@
 <div class="stripe">
 
     <div class="container-fluid">
-        <h1 class="main-title--avoid-logo">Onion's public profile</h1>
+        <h1 class="main-title">Onion's public profile</h1>
     </div>
 
 
 </div>
 
-<div class="main-content-wrapper">
+<div class="main-content-wrapper public-profile-layout">
     <div class="container-fluid main-container">
 
         <div class="row">
 
-            <div class="col-xs-12 main">
+            <div class="col-xs-12 col-sm-9 main">
 
                 <div class="main__content">
                     <h1>JMC Blue Dwarf <span class="hidden">- a play-by-post roleplaying game</span></h1>
@@ -37,6 +37,11 @@
 
             </div>
 
+            <div class="col-xs-12 col-sm-3 sidebar sidebar--game-info-col">
+
+                <?php include("_game-info-col.php") ?>
+
+            </div>
 
         </div>
 
