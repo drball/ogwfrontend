@@ -362,6 +362,10 @@ a:active {
 hr {
   border-top: 1px dashed #dad5bf;
 }
+.coloured-box {
+  padding: 10px;
+  background: #dad5bf;
+}
 /* Main content
 -------------------------------------------------- */
 .main__content h1:first-of-type {
@@ -576,6 +580,9 @@ hr {
   margin-top: -10px;
   margin-left: 12px;
   vertical-align: middle;
+}
+.sidebar__activity {
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   .sidebar__game-img {

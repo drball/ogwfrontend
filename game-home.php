@@ -185,6 +185,55 @@
                                 </tbody>
                             </table>
 
+                            <hr>
+
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <div class="game__info-box">
+                                        <h3>Game Information</h3>
+                                        <p><strong>Created by : </strong>Kimmie13</p>
+
+                                        <p><strong>Category : </strong>
+                                            Fantasy</p>
+
+                                        <p><strong>Number of characters : </strong>9</p>
+
+                                        <p><strong>Number of posts : </strong>125</p>
+
+                                        <p><strong>Created : </strong>Aug 17, 2014</p>
+
+
+                                        <div id="game-social-icons">
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="col-md-6 ">
+                                    <div class="game__info-box">
+                                        <h3>Moderators</h3>
+
+                                        <ul>
+
+                                            <li><a href="/members/1796" title="View profile for member Kimmie13">Kimmie13</a></li>
+
+                                        </ul>
+
+
+                                        <h3>Members</h3>
+                                        <p>There are <a href="/games/1183/members" title="View members">6 members</a> in this game</p>
+
+                                        <h3>Pending Members</h3>
+                                        <p>There are no pending members in this game</p>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
                         </div>
 
 
