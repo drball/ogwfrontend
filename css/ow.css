@@ -359,6 +359,9 @@ a:active {
   color: #777;
   margin-right: 5px;
 }
+hr {
+  border-top: 1px dashed #dad5bf;
+}
 /* Main content
 -------------------------------------------------- */
 .main__content h1:first-of-type {
@@ -734,4 +737,43 @@ a:active {
 -------------------------------------------------- */
 .game-home__title {
   margin-top: 0;
+}
+.post-calendar {
+  border-collapse: collapse;
+  border: 0;
+  font-size: 0.8em;
+  width: 100%;
+}
+.post-calendar th {
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.6em;
+}
+.post-calendar td {
+  text-align: center;
+}
+.post-calendar__month {
+  background: #dad5bf;
+  margin: 0 2px 2px 0;
+  border: 2px solid #fff;
+  height: 24px;
+}
+.post-calendar__year {
+  text-align: left;
+  width: 30px;
+}
+.post-calendar a,
+.post-calendar a:visited {
+  text-decoration: none;
+  display: block;
+  height: 24px;
+  padding-top: 3px;
+}
+.post-calendar a:visited {
+  color: #4c818f;
+}
+.post-calendar a:hover,
+.post-calendar a:active {
+  background: #97a835;
+  color: #fff;
 }

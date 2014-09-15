@@ -145,9 +145,45 @@
                                 </div>
                             </div>
 
+                            <hr>
 
+                            <h2>Post summary</h2>
 
+                            <table class="post-calendar">
+                                <tbody><tr>
+                                    <th></th>
+                                    <th>Jan</th>
+                                    <th>Feb</th>
+                                    <th>Mar</th>
+                                    <th>Apr</th>
+                                    <th>May</th>
+                                    <th>Jun</th>
+                                    <th>Jul</th>
+                                    <th>Aug</th>
+                                    <th>Sep</th>
+                                    <th>Oct</th>
+                                    <th>Nov</th>
+                                    <th>Dec</th>
+                                </tr>
 
+                                <tr>
+                                    <td class="post-calendar__year">2014</td>
+                                    <td class="post-calendar__month"><a href="/games/1183/posts/date/2014/jan">126</a></td>
+                                    <td class="post-calendar__month"><a href="/games/1183/posts/date/2014/feb">67</a></td>
+                                    <td class="post-calendar__month"><a href="/games/1183/posts/date/2014/mar">45</a></td>
+                                    <td class="post-calendar__month"><a href="/games/1183/posts/date/2014/apr">454</a></td>
+                                    <td class="post-calendar__month"><a href="/games/1183/posts/date/2014/may">45</a></td>
+                                    <td class="post-calendar__month"><a href="/games/1183/posts/date/2014/jun">4</a></td>
+                                    <td class="post-calendar__month"><a href="/games/1183/posts/date/2014/jul">23</a></td>
+                                    <td class="post-calendar__month"><a href="/games/1183/posts/date/2014/aug">106</a></td>
+                                    <td class="post-calendar__month"><a href="/games/1183/posts/date/2014/sep">19e</a></td>
+                                    <td class="post-calendar__month"><a href="/games/1183/posts/date/2014/oct">34</a></td>
+                                    <td class="post-calendar__month"><a href="/games/1183/posts/date/2014/nov">234</a></td>
+                                    <td class="post-calendar__month"><a href="/games/1183/posts/date/2014/dec">4567</a></td>
+
+                                </tr>
+                                </tbody>
+                            </table>
 
                         </div>
 
