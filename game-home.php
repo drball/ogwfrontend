@@ -49,11 +49,11 @@
 
                 </div>
 
-                <div class="col-xs-12 col-sm-9 col-md-7 main">
+                <div class="col-xs-12 col-sm-9 col-md-7 content-block infinite-height">
 
 
 
-                    <div class="main__content">
+                    <div class="content-block__content">
 
                         <div class="latestposts">
 

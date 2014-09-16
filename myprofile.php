@@ -17,9 +17,9 @@
 
         <div class="row">
 
-            <div class="col-xs-12 col-sm-9 main">
+            <div class="col-xs-12 col-sm-9 content-block infinite-height">
 
-                <div class="main__content">
+                <div class="content-block__content">
                     <h1>JMC Blue Dwarf <span class="hidden">- a play-by-post roleplaying game</span></h1>
 
                     <div class="row">

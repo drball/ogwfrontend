@@ -41,11 +41,11 @@
 
             </div>
 
-            <div class="col-xs-12 col-sm-9 col-md-7 main post">
+            <div class="col-xs-12 col-sm-9 col-md-7 content-block infinite-height post">
 
 
 
-                <div class="main__content">
+                <div class="content-block__content">
 
                     <h1 class="post__title">Post title of this post</h1>
 

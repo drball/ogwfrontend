@@ -3,24 +3,22 @@
 <?php include("_navbar.php") ?>
 
 
-    <div class="stripe stripe--tall">
-
-        <div class="container-fluid">
-            <h1 class="main-title">Onion's public profile</h1>
-        </div>
-
-
-    </div>
+    <div class="stripe stripe--medium"></div>
 
     <div class="main-content-wrapper public-profile-layout">
         <div class="container-fluid main-container">
 
             <div class="row">
 
-                <div class="col-xs-12 col-sm-9 main">
+                <div class="col-xs-12 col-sm-10 content-block public-profile infinite-height">
 
-                    <div class="main__content">
-                        <h1>JMC Blue Dwarf <span class="hidden">- a play-by-post roleplaying game</span></h1>
+                    <div class="content-block__content">
+
+                        <div class="public-profile__user-image user-image">
+                            <img src="http://www.ongoingworlds.com/images/user_images/0/user8-image.jpg?r=1263554683">
+                        </div>
+
+                        <h1 class="public-profile__title">Onion</h1>
 
                         <div class="row">
                             <div class="col-md-9">
@@ -37,11 +35,9 @@
 
                 </div>
 
-                <div class="col-xs-12 col-sm-3 sidebar sidebar--game-info-col">
-
-                    <?php include("_game-info-col.php") ?>
-
-                </div>
+                <aside class="col-xs-12 col-sm-9 col-sm-offset-3 col-md-2 col-md-offset-0 secondary">
+                    <?php include("_secondary.php") ?>
+                </aside>
 
             </div>
 

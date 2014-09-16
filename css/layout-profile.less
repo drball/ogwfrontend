@@ -5,22 +5,60 @@
 
 @media (min-width: @screen-sm-min) {
   .public-profile-layout   {
-    margin-top:-180px;
+    margin-top:-130px;
   }
 
   .public-profile-layout .container-fluid   {
     overflow:hidden;
   }
 
-  .public-profile-layout .main {
-    margin-top:180px; /* To match the offset */
+  .public-profile-layout .content-block {
+    margin-top:130px; /* To match the offset */
   }
 
-  .public-profile-layout .main {
+  .public-profile-layout .content-block {
 
+  }
+
+  .public-profile-layout .secondary {
+    margin-top:130px; /* To match the offset - but not until it gets shown as a third column */
   }
 }
 
+/* Public profile */
+
+.public-profile__user-image {
+  display:inline-block;
+}
+
+.public-profile__title {
+  margin-top:-5px;
+  margin-left:175px;
+  line-height:1em;
+  font-size:3.2em;
+}
+
+@media (min-width: @screen-sm-min) {
+  .public-profile__user-image {
+    margin:0 10px 10px -15px;
+    border:15px solid @light-bg;
+    position:absolute;
+    top:-75px;
+    width:190px;
+    height:190px;
+  }
+}
+
+
+
+
+
+
 @media (min-width: @screen-md-min) {
 
+}
+
+.user-image img {
+  width:100%;
+  height:auto;
 }

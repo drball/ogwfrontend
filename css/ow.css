@@ -17,13 +17,13 @@ body {
   background: #ffffff;
   z-index: 100;
 }
-.main {
+.content-block {
   background: #ffffff;
   z-index: 200;
   padding-bottom: 15px;
   padding-top: 20px;
 }
-.main__content {
+.content-block__content {
   padding-bottom: 15px;
 }
 .footer {
@@ -40,14 +40,14 @@ body {
 @media (min-width: 768px) {
   .main-content-wrapper .container-fluid {
     overflow: hidden;
+    /* for the infinitely tall columns */
   }
-  /* for the infinitely tall columns */
   .sidebar {
     padding-top: 15px;
+    /* force infinitely tall columns*/
     padding-bottom: 5000px;
     margin-bottom: -5000px;
   }
-  /* force infinitely tall columns*/
   .navbar {
     border-radius: 0;
   }
@@ -56,11 +56,6 @@ body {
   }
 }
 @media (min-width: 992px) {
-  .main {
-    padding-bottom: 5000px;
-    margin-bottom: -5000px;
-    /* force infinitely tall columns*/
-  }
   .secondary {
     padding-right: 0;
     padding-left: 20px;
@@ -86,11 +81,11 @@ body {
   .game-layout .container-fluid {
     overflow: hidden;
   }
-  .game-layout .main {
+  .game-layout .content-block {
     margin-top: 80px;
     /* To match the offset */
   }
-  .game-layout .main {
+  .game-layout .content-block {
     padding-left: 0;
   }
 }
@@ -109,11 +104,11 @@ body {
   .game-home-layout .container-fluid {
     overflow: hidden;
   }
-  .game-home-layout .main {
+  .game-home-layout .content-block {
     margin-top: 180px;
     /* To match the offset */
   }
-  .game-home-layout .main {
+  .game-home-layout .content-block {
     padding-left: 0;
   }
 }
@@ -323,6 +318,10 @@ a:active {
   color: #4c818f;
   text-decoration: underline;
 }
+.infinite-height {
+  padding-bottom: 5000px;
+  margin-bottom: -5000px;
+}
 .img-responsive {
   width: 100%;
 }
@@ -447,6 +446,9 @@ hr {
   margin: 0;
 }
 @media (min-width: 768px) {
+  .stripe--medium {
+    height: 130px;
+  }
   .stripe--tall {
     height: 200px;
   }
@@ -473,7 +475,7 @@ hr {
   }
 }
 /* Title in the main bit */
-.main .main-title {
+.content-block .main-title {
   margin-top: 0;
 }
 /* Monster logo */
@@ -796,13 +798,41 @@ hr {
 -------------------------------------------------- */
 @media (min-width: 768px) {
   .public-profile-layout {
-    margin-top: -180px;
+    margin-top: -130px;
   }
   .public-profile-layout .container-fluid {
     overflow: hidden;
   }
-  .public-profile-layout .main {
-    margin-top: 180px;
+  .public-profile-layout .content-block {
+    margin-top: 130px;
     /* To match the offset */
   }
+  .public-profile-layout .secondary {
+    margin-top: 130px;
+    /* To match the offset - but not until it gets shown as a third column */
+  }
+}
+/* Public profile */
+.public-profile__user-image {
+  display: inline-block;
+}
+.public-profile__title {
+  margin-top: -5px;
+  margin-left: 175px;
+  line-height: 1em;
+  font-size: 3.2em;
+}
+@media (min-width: 768px) {
+  .public-profile__user-image {
+    margin: 0 10px 10px -15px;
+    border: 15px solid #ffffff;
+    position: absolute;
+    top: -75px;
+    width: 190px;
+    height: 190px;
+  }
+}
+.user-image img {
+  width: 100%;
+  height: auto;
 }
