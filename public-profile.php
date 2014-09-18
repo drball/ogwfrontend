@@ -3,14 +3,14 @@
 <?php include("_navbar.php") ?>
 
 
-    <div class="stripe stripe--medium"></div>
+<!--    <div class="stripe stripe--medium"></div>-->
 
-    <div class="main-content-wrapper public-profile-layout">
+    <div class="main-content-wrapper public-profile-layout custom-bg custom-bg--one">
         <div class="container-fluid main-container">
 
             <div class="row">
 
-                <div class="col-xs-12 col-sm-10 content-block public-profile infinite-height">
+                <div class="col-xs-12 col-sm-10 content-block public-profile">
 
                     <div class="content-block__content">
 
@@ -20,14 +20,20 @@
 
                         <h1 class="public-profile__title">Onion</h1>
 
+                        <div id="user-social-icons">
+
+                        </div>
+
                         <div class="row">
-                            <div class="col-md-9">
-                                <div class="game-summary" style="display: block;">
-                                    <p>Hero High is a high school where young super humans are taught how to use their powers.  This establishment was created back in the fifties to help super humans learn to control their powers after one to many incidents.  Once a child is identified as a super human they are automatically enrolled by <span class="read-more" style="display: inline;">… <a href="#">Show More</a></span></p>
-                                </div>
+                            <div class="col-md-6">
+                                <p><strong>Full Name: </strong>Sirius</p>
+                                <p><strong>Location: UK</strong></p>
+                                <p><strong>Joined: </strong>Feb 15, 2014</p>
+                                <p><strong>Description: </strong>Creator of OngoingWorlds.com</p>
+                                <p><strong>Email: </strong>david@ongoingworlds.com</p>
                             </div>
 
-                            <div class="col-md-3">
+                            <div class="col-md-6">
 
                             </div>
                         </div>

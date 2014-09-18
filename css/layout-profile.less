@@ -5,7 +5,7 @@
 
 @media (min-width: @screen-sm-min) {
   .public-profile-layout   {
-    margin-top:-130px;
+    margin-top:0;
   }
 
   .public-profile-layout .container-fluid   {
@@ -21,7 +21,7 @@
   }
 
   .public-profile-layout .secondary {
-    margin-top:130px; /* To match the offset - but not until it gets shown as a third column */
+    margin-top:110px; /* To match the offset - but not until it gets shown as a third column */
   }
 }
 
@@ -42,8 +42,8 @@
   .public-profile__user-image {
     margin:0 10px 10px -15px;
     border:15px solid @light-bg;
-    position:absolute;
-    top:-75px;
+    float:left;
+    margin-top:-75px;
     width:190px;
     height:190px;
   }
