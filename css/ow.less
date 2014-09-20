@@ -522,6 +522,29 @@ hr {
 /* Secondary notices - right col
 -------------------------------------------------- */
 
+.secondary h1,
+.secondary h2,
+.secondary h3 {
+
+}
+
+
+@media (min-width: @screen-md-min) {
+
+
+  .secondary h1,
+  .secondary h2,
+  .secondary h3 {
+    margin-left:-20px;
+    padding:5px 10px 5px 20px;
+    background:rgba(255,255,255,0.5);
+    color:#777;
+    font-size:1.5em;
+  }
+
+}
+
+
 .notice-box {
   color:#777;
   display:block;
@@ -544,6 +567,16 @@ hr {
 .notice-box__title        { font-size:1.1em; font-weight:bold; margin-top:0.5em; margin-bottom: 0.5em; text-align:center; }
 .notice-box__info p       { font-size:0.8em; margin:0; }
 
+.notice-box h1,
+.notice-box h2,
+.notice-box h3 {
+  margin-left:-20px;
+  padding:5px 10px 5px 20px;
+  background:rgba(255,255,255,0.5);
+  color:#777;
+  font-size:1.5em;
+}
+
 @media (min-width: @screen-sm-min) {
 
   .notice-box {
@@ -561,6 +594,16 @@ hr {
   .notice-box:hover,
   .notice-box:active {
     background:none;
+  }
+
+  .secondary h1,
+  .secondary h2,
+  .secondary h3 {
+    margin-left:-20px;
+    padding:5px 10px 5px 20px;
+    background:rgba(255,255,255,0.5);
+    color:#777;
+    font-size:1.5em;
   }
 
 }

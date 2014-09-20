@@ -513,6 +513,17 @@ hr {
 }
 /* Secondary notices - right col
 -------------------------------------------------- */
+@media (min-width: 992px) {
+  .secondary h1,
+  .secondary h2,
+  .secondary h3 {
+    margin-left: -20px;
+    padding: 5px 10px 5px 20px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #777;
+    font-size: 1.5em;
+  }
+}
 .notice-box {
   color: #777;
   display: block;
@@ -539,6 +550,15 @@ hr {
   font-size: 0.8em;
   margin: 0;
 }
+.notice-box h1,
+.notice-box h2,
+.notice-box h3 {
+  margin-left: -20px;
+  padding: 5px 10px 5px 20px;
+  background: rgba(255, 255, 255, 0.5);
+  color: #777;
+  font-size: 1.5em;
+}
 @media (min-width: 992px) {
   .notice-box {
     padding: 0;
@@ -547,6 +567,15 @@ hr {
   .notice-box:hover,
   .notice-box:active {
     background: none;
+  }
+  .secondary h1,
+  .secondary h2,
+  .secondary h3 {
+    margin-left: -20px;
+    padding: 5px 10px 5px 20px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #777;
+    font-size: 1.5em;
   }
 }
 /* Specific layouts
