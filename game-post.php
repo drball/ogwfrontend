@@ -9,8 +9,18 @@
         <div class="row">
             <div class="col-md-10">
                 <div class="top-game-options">
-<!--                    <a href="" class="top-game-options__join btn btn-primary">Join now</a> <a href="">or read from the beginning</a>-->
-                    <a href="" class="btn btn-default" ><i class="glyphicon glyphicon-cog"></i></a>
+                    <a href="" class="top-game-options__join btn btn-primary">Join now</a> <a href="">or read from the beginning</a>
+                    <div class="btn-group">
+                        <a href="#" id="drop6" role="button" data-toggle="dropdown" class="btn btn-default" ><i class="glyphicon glyphicon-cog"></i></a>
+
+                        <ul id="menu3" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="drop6">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Action</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Another action</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Something else here</a></li>
+                            <li role="presentation" class="divider"></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.com/fat">Separated link</a></li>
+                        </ul>
+                    </div>
 
                 </div>
             </div>

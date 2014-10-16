@@ -39,7 +39,7 @@ body {
 }
 @media (min-width: 768px) {
   .main-content-wrapper .container-fluid {
-    overflow: hidden;
+    overflow-y: hidden;
     /* for the infinitely tall columns */
   }
   .sidebar {
@@ -124,6 +124,9 @@ body {
 }
 /* Navbar styles
 -------------------------------------------------- */
+.navbar {
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
 .navbar .container-fluid {
   position: relative;
 }
@@ -140,11 +143,25 @@ body {
 .navbar-brand:active {
   color: #56742a;
 }
+.navbar-form {
+  margin-right: 0 !important;
+}
 @media (min-width: 768px) {
   .navbar-brand {
     left: 100px;
     top: 0px;
   }
+}
+/* Navbar navigation
+-------------------------------------------------- */
+.navbar-nav > li > a {
+  padding: 7px 15px;
+  margin: 8px 0;
+}
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:active {
+  background: #97a835;
+  color: #fff;
 }
 /* Footer styles
 -------------------------------------------------- */
@@ -287,6 +304,7 @@ body {
 .nav-sidebar > li > a,
 .nav-sidebar > li > a:visited {
   transition: background 200ms, color 200ms;
+  font-size: 1.15em;
 }
 .nav-sidebar > li > a:hover,
 .nav-sidebar > li > a:active {
@@ -408,6 +426,7 @@ hr {
   transition: all 500ms linear;
   position: relative;
   height: 50px;
+  z-index: 100;
 }
 .stripe a,
 .stripe a:visited {
@@ -436,6 +455,9 @@ hr {
     border-bottom: 5px solid #56742a;
     height: 100px;
   }
+}
+.stripe .dropdown-menu {
+  z-index: 1000;
 }
 /* A really tall version of the stripe, for game home
 -------------------------------------------------- */
@@ -827,6 +849,9 @@ hr {
   margin-bottom: 20px;
 }
 .game__info-box__title {
+  margin-top: 0;
+}
+.game-desc__title {
   margin-top: 0;
 }
 /* Profile styles (public & private)

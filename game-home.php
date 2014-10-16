@@ -9,11 +9,11 @@
 
 
             <div class="row">
-                <div class="col-md-offset-3 col-md-7 stripe__text-wrapper">
-                    <div class="stripe__text">
-                        <p>Tha daft apeth shurrup bobbar ee by gum big girl's blouse. Will 'e 'eckerslike shu' thi gob big girl's blouse. Chuffin' nora soft southern pansy tintintin god's own county where there's muck there's brass. By 'eck be reet. Shu' thi gob. Th'art nesh thee soft southern pansy shurrup ah'll learn thi tha what face like a slapped arse. Mardy bum. What's that when it's at ooam wacken thi sen up breadcake ah'll box thi ears shurrup. Nah then by 'eck tha daft apeth michael palin. Ah'll gi' thee a thick ear.</p>
-                    </div>
-                </div>
+<!--                <div class="col-md-offset-3 col-md-7 stripe__text-wrapper">-->
+<!--                    <div class="stripe__text">-->
+<!--                        <p>Tha daft apeth shurrup bobbar ee by gum big girl's blouse. Will 'e 'eckerslike shu' thi gob big girl's blouse. Chuffin' nora soft southern pansy tintintin god's own county where there's muck there's brass. By 'eck be reet. Shu' thi gob. Th'art nesh thee soft southern pansy shurrup ah'll learn thi tha what face like a slapped arse. Mardy bum. What's that when it's at ooam wacken thi sen up breadcake ah'll box thi ears shurrup. Nah then by 'eck tha daft apeth michael palin. Ah'll gi' thee a thick ear.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
 
                 <div class="col-md-2">
                     <div class="top-game-options">
@@ -51,9 +51,12 @@
 
                 <div class="col-xs-12 col-sm-9 col-md-7 content-block infinite-height">
 
-
-
                     <div class="content-block__content">
+
+                        <div class="game-desc">
+                            <h2 class="game-desc__title">About JMC Blue Dwarf:</h2>
+                            <p class="game-desc__content">Tha daft apeth shurrup bobbar ee by gum big girl's blouse. Will 'e 'eckerslike shu' thi gob big girl's blouse. Chuffin' nora soft southern pansy tintintin god's own county where there's muck there's brass. By 'eck be reet. Shu' thi gob. Th'art nesh thee soft southern pansy shurrup ah'll learn thi tha what face like a slapped arse. Mardy bum. What's that when it's at ooam wacken thi sen up breadcake ah'll box thi ears shurrup. Nah then by 'eck tha daft apeth michael palin. Ah'll gi' thee a thick ear. <a href="#">[Show more]</a></p>
+                        </div>
 
                         <div class="latestposts">
 
