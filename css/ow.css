@@ -610,10 +610,29 @@ hr {
   position: absolute;
   top: 9px;
   right: 60px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.top-game-options__join {
+  background: #56742a;
+  color: #fff !important;
+  transition: background 200ms;
+}
+.top-game-options__join:hover,
+.top-game-options__join:active {
+  background: #97a835;
+}
+.top-game-options__read-start {
+  margin-left: 5px;
+}
+.top-game-options__title {
+  margin-bottom: 5px;
+  line-height: 1em;
+  font-size: 1.25em;
 }
 @media (min-width: 768px) {
   .top-game-options {
-    top: 20px;
+    top: 10px;
     right: 0;
   }
 }
