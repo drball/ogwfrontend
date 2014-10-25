@@ -7,22 +7,10 @@
         <div class="container-fluid">
 
 
-
-            <div class="row">
-<!--                <div class="col-md-offset-3 col-md-7 stripe__text-wrapper">-->
-<!--                    <div class="stripe__text">-->
-<!--                        <p>Tha daft apeth shurrup bobbar ee by gum big girl's blouse. Will 'e 'eckerslike shu' thi gob big girl's blouse. Chuffin' nora soft southern pansy tintintin god's own county where there's muck there's brass. By 'eck be reet. Shu' thi gob. Th'art nesh thee soft southern pansy shurrup ah'll learn thi tha what face like a slapped arse. Mardy bum. What's that when it's at ooam wacken thi sen up breadcake ah'll box thi ears shurrup. Nah then by 'eck tha daft apeth michael palin. Ah'll gi' thee a thick ear.</p>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-                <div class="col-md-2">
-                    <div class="top-game-options">
-                        <!--                    <a href="" class="top-game-options__join btn btn-primary">Join now</a> <a href="">or read from the beginning</a>-->
-                        <a href="" class="btn btn-default" ><i class="glyphicon glyphicon-cog"></i></a>
-
-                    </div>
-                </div>
+            <div class="top-game-options">
+                <a href="" class="top-game-options__join btn btn-primary">Join now</a> <a href="" class="top-game-options__read-start">or read from the beginning</a>
             </div>
+
 
             <button type="button" class="sidecol-toggle collapsed" data-toggle="collapse" data-target=".sidebar__optional-content">
                 <span class="sr-only">Toggle navigation</span>
@@ -64,7 +52,8 @@
 
                             <div class="post-summary">
 
-                                <h3 class="post-summary__title"><a href="/games/1190/posts/37" title="View post Clara: Land of the rising sun">Clara: Land of the rising sun</a></h3>
+                                <h3 class="post-summary__title">Clara: Land of the rising sun</h3>
+                                <a href="/games/1190/posts/37" class="post-summary__link"></a>
 
                                 <p class="post-summary__date date">Sep 13, 2014, 9:32am</p>
 
@@ -84,7 +73,8 @@
 
                             <div class="post-summary">
 
-                                <h3 class="post-summary__title"><a href="/games/1190/posts/37" title="View post Clara: Land of the rising sun">Helluva Mood Swing</a></h3>
+                                <h3 class="post-summary__title">Helluva Mood Swing</h3>
+                                <a href="/games/1190/posts/37" class="post-summary__link"></a>
 
                                 <p class="post-summary__date date">Sep 13, 2014, 9:32am</p>
 
@@ -98,7 +88,8 @@
 
                             <div class="post-summary">
 
-                                <h3 class="post-summary__title"><a href="/games/1190/posts/37" title="View post Clara: Land of the rising sun">Victory for now</a></h3>
+                                <h3 class="post-summary__title">Victory for now</h3>
+                                <a href="/games/1190/posts/37" class="post-summary__link"></a>
 
                                 <p class="post-summary__date date">Sep 13, 2014, 9:32am</p>
 
@@ -112,7 +103,8 @@
 
                             <div class="post-summary">
 
-                                <h3 class="post-summary__title"><a href="/games/1190/posts/37" title="View post Clara: Land of the rising sun">OOC -</a></h3>
+                                <h3 class="post-summary__title">OOC - asdas</h3>
+                                <a href="/games/1190/posts/37" class="post-summary__link"></a>
 
                                 <p class="post-summary__date date">Sep 13, 2014, 9:32am</p>
 
@@ -126,7 +118,8 @@
 
                             <div class="post-summary">
 
-                                <h3 class="post-summary__title"><a href="/games/1190/posts/37" title="View post Clara: Land of the rising sun">Interesd asdas dasd asdas asd sds ddasdasdad asd ad asds add asd asd sad asdsd adasd sting...</a></h3>
+                                <h3 class="post-summary__title">Interesd asdas dasd asdas asd sds ddasdasdad asd ad asds add asd asd sad asdsd adasd sting...</h3>
+                                <a href="/games/1190/posts/37" class="post-summary__link"></a>
 
                                 <p class="post-summary__date date">Sep 13, 2014, 9:32am</p>
 

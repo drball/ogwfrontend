@@ -5,6 +5,7 @@
 
     <a href="#" class="sidebar__game-img">
         <img src="images/game-image.jpg" class="img-responsive game-img" alt="game">
+        <span class="edit-game"><span class="edit-game__text">Edit game</span> <i class="glyphicon glyphicon-cog"></i></span>
     </a>
 
     <h2 class="sidebar__game-title"><a href="#">JMC Blue Dwarf</a></h2>
