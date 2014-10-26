@@ -84,6 +84,7 @@
   position:relative;
 }
 
+
 .edit-game {
   background:rgba(0,0,0,1);
   color: #eee;
@@ -140,6 +141,13 @@
 
   .sidebar__content {
     border:none;
+  }
+
+}
+
+@media (min-width: @screen-sm-min) and (max-width: 900px) {
+  .sidebar__game-img {
+    margin:-5px 9px 0;
   }
 
 }
@@ -275,6 +283,7 @@
 
 .post-summary__excerpt {
   font-size:0.9em;
+  transition:color 200ms;
   transition:color 200ms;
 }
 

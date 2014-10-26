@@ -7,9 +7,37 @@
         <div class="container-fluid">
 
 
-            <div class="top-game-options">
-                <a href="" class="top-game-options__join btn btn-primary">Join now</a> <a href="" class="top-game-options__read-start">or read from the beginning</a>
-            </div>
+            <?php
+
+            $isLoggedIn = true;
+
+            if ($isLoggedIn == true): ?>
+
+                <div class="top-game-options">
+                        <p class="top-game-options__title">
+                            Status in game:
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    Member <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </p>
+
+                </div>
+
+            <?php else: ?>
+                <div class="top-game-options">
+                    <p class="top-game-options__title">You are not a member of this game</p>
+                    <a href="" class="btn btn-primary top-game-options__join">Join now</a> <a href="" class="top-game-options__read-start">or read from the beginning</a>
+                </div>
+            <?php endif; ?>
 
 
             <button type="button" class="sidecol-toggle collapsed" data-toggle="collapse" data-target=".sidebar__optional-content">
@@ -45,6 +73,8 @@
                             <h2 class="game-desc__title">About JMC Blue Dwarf:</h2>
                             <p class="game-desc__content">Tha daft apeth shurrup bobbar ee by gum big girl's blouse. Will 'e 'eckerslike shu' thi gob big girl's blouse. Chuffin' nora soft southern pansy tintintin god's own county where there's muck there's brass. By 'eck be reet. Shu' thi gob. Th'art nesh thee soft southern pansy shurrup ah'll learn thi tha what face like a slapped arse. Mardy bum. What's that when it's at ooam wacken thi sen up breadcake ah'll box thi ears shurrup. Nah then by 'eck tha daft apeth michael palin. Ah'll gi' thee a thick ear. <a href="#">[Show more]</a></p>
                         </div>
+
+                        <hr>
 
                         <div class="latestposts">
 

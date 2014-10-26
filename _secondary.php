@@ -2,7 +2,7 @@
 
 <div class="row">
 
-    <div class="col-xs-6 col-sm-4 col-md-12">
+    <div class="col-xs-6 col-sm-4 col-md-12 notice-box__outer">
         <a href="/games/1008" class="notice-box">
 
             <img src="images/game1015-image.jpg" alt="The Shifter's War - roleplaying game" class="game-image img-responsive notice-box__img">
@@ -16,7 +16,7 @@
         </a>
     </div>
 
-    <div class="col-xs-6 col-sm-4 col-md-12">
+    <div class="col-xs-6 col-sm-4 col-md-12 notice-box__outer">
         <a href="/games/1008" class="notice-box">
 
             <img src="images/game1021-image.jpg" alt="The Shifter's War - roleplaying game" class="game-image img-responsive notice-box__img">

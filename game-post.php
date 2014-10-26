@@ -6,28 +6,25 @@
 
     <div class="container-fluid">
 
-        <div class="row">
-            <div class="col-md-10">
 
-                <?php
+        <?php
 
-                $isLoggedIn = false;
+        $isLoggedIn = true;
 
-                if ($isLoggedIn == true): ?>
+        if ($isLoggedIn == true): ?>
 
-                    <div class="top-game-options">
-                        <p class="top-game-options__title">You are not a member of this game</p>
-                        <a href="" class="btn btn-primary top-game-options__join">Join now</a> <a href="" class="top-game-options__read-start">or read from the beginning</a>
-                    </div>
-
-                <?php else: ?>
-                    <div class="top-game-options">
-                        <p class="top-game-options__title">You are not a member of this game</p>
-                        <a href="" class="btn btn-primary top-game-options__join">Join now</a> <a href="" class="top-game-options__read-start">or read from the beginning</a>
-                    </div>
-                <?php endif; ?>
+            <div class="top-game-options">
+                <p class="top-game-options__title">You are not a member of this game</p>
+                <a href="" class="btn btn-primary top-game-options__join">Join now</a> <a href="" class="top-game-options__read-start">or read from the beginning</a>
             </div>
-        </div>
+
+        <?php else: ?>
+            <div class="top-game-options">
+                <p class="top-game-options__title">You are not a member of this game</p>
+                <a href="" class="btn btn-primary top-game-options__join">Join now</a> <a href="" class="top-game-options__read-start">or read from the beginning</a>
+            </div>
+        <?php endif; ?>
+
 
         <button type="button" class="sidecol-toggle collapsed" data-toggle="collapse" data-target=".sidebar__optional-content">
             <span class="sr-only">Toggle navigation</span>

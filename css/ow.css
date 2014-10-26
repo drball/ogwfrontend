@@ -47,6 +47,7 @@ body {
     /* force infinitely tall columns*/
     padding-bottom: 5000px;
     margin-bottom: -5000px;
+    box-shadow: -2px 2px 20px #000000;
   }
   .navbar {
     border-radius: 0;
@@ -280,6 +281,9 @@ body {
   padding: 10px;
   border: none;
 }
+.sidebar__optional-content {
+  padding-bottom: 15px;
+}
 .sidecol-toggle .icon-bar {
   display: block;
   width: 22px;
@@ -299,12 +303,13 @@ body {
 /* Sidebar nav
 -------------------------------------------------- */
 .nav-sidebar {
-  margin: 0 0 10px 0;
+  margin: 0 -15px 10px;
 }
 .nav-sidebar > li > a,
 .nav-sidebar > li > a:visited {
   transition: background 200ms, color 200ms;
-  font-size: 1.15em;
+  font-size: 1em;
+  padding: 5px 15px;
 }
 .nav-sidebar > li > a:hover,
 .nav-sidebar > li > a:active {
@@ -320,6 +325,11 @@ body {
 @media (min-width: 768px) {
   .nav-sidebar {
     margin: 0 0 10px -15px;
+  }
+  .nav-sidebar > li > a,
+  .nav-sidebar > li > a:visited {
+    font-size: 1.15em;
+    padding: 10px 15px;
   }
 }
 /* Global styles
@@ -557,7 +567,7 @@ hr {
 .notice-box:active {
   color: #527234;
   text-decoration: none;
-  background: #c8c3ad url(../images/bg-tex-darkest.jpg);
+  background: rgba(255, 255, 255, 0.5);
 }
 .notice-box:hover .notice-box__title {
   color: #527234;
@@ -575,10 +585,8 @@ hr {
 }
 .notice-box h1,
 .notice-box h2,
-.notice-box h3 {
-  margin-left: -20px;
-  padding: 5px 10px 5px 20px;
-  background: rgba(255, 255, 255, 0.5);
+.notice-box h3,
+.notice-box__title {
   color: #777;
   font-size: 1.5em;
 }
@@ -593,12 +601,19 @@ hr {
   }
   .secondary h1,
   .secondary h2,
-  .secondary h3 {
-    margin-left: -20px;
+  .secondary h3,
+  .notice-box__title {
     padding: 5px 10px 5px 20px;
     background: rgba(255, 255, 255, 0.5);
-    color: #777;
-    font-size: 1.5em;
+  }
+}
+@media (min-width: 1200px) {
+  .secondary h1,
+  .secondary h2,
+  .secondary h3,
+  .notice-box__title {
+    margin-left: -20px;
+    background: rgba(255, 255, 255, 0.5);
   }
 }
 /* Specific layouts
@@ -722,6 +737,11 @@ hr {
   }
   .sidebar__content {
     border: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 900px) {
+  .sidebar__game-img {
+    margin: -5px 9px 0;
   }
 }
 .user-game-relationship {
