@@ -26,7 +26,7 @@
 
                 <?php
 
-                $isLoggedIn = false;
+                $isLoggedIn = true;
 
                 if ($isLoggedIn == true): ?>
 
@@ -58,8 +58,7 @@
 
 
                 <?php else: ?>
-                    <p>You are not a member of this game</p>
-                    <a href="#" class="btn btn-primary btn-lg center-block">Join this game</a>
+
                 <?php endif; ?>
             </div>
 

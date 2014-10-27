@@ -27,15 +27,24 @@ body {
 .secondary {
 }
 
+/* Content block - the middle column
+-------------------------------------------------- */
 .content-block {
   background: @light-bg;
   z-index: 200;
   padding-bottom: 15px;
   padding-top: 20px;
+
 }
 
 .content-block__content {
   padding-bottom: 15px;
+}
+
+@media (min-width: @screen-sm-min) {
+  .content-block {
+    min-height:600px;
+  }
 }
 
 .footer {
@@ -62,7 +71,7 @@ body {
     /* force infinitely tall columns*/
     padding-bottom: 5000px;
     margin-bottom: -5000px;
-    box-shadow:-2px 2px 20px #000
+    box-shadow:-2px 2px 20px rgba(0,0,0,0.5);
   }
 
   .navbar {
@@ -91,11 +100,11 @@ body {
 @media (min-width: 1300px) {
 
   .container-fluid {
-    width: 1260px;
+    width: 1500px;
   }
 
   .footer .container-fluid {
-    width: 1260px;
+    width: 1500px;
   }
 }
 
@@ -120,7 +129,7 @@ body {
   }
 
   .game-layout .content-block {
-    padding-left: 0;
+//    padding-left: 0;
   }
 }
 
@@ -352,6 +361,7 @@ body {
 /* Sidebar content
 -------------------------------------------------- */
 .sidebar__content {
+
 }
 
 .sidecol-toggle {
@@ -376,12 +386,26 @@ body {
 }
 
 @media (min-width: @screen-sm-min) {
+
+  .sidebar__content {
+    padding-bottom:20px;
+  }
+
   .sidebar__optional-content {
     display: block;
   }
 
   .sidecol-toggle {
     display: none;
+  }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-md-max) {
+
+  .sidebar__content {
+    //--hack to make secondary fit up alongside at sm
+    position: absolute;
+    width: 100%;
   }
 }
 
@@ -433,11 +457,6 @@ h3 {
   color: #666;
 }
 
-.user-image {
-  max-width: 100%;
-  height: auto;
-}
-
 a {
   color: @dark-brand-text;
 }
@@ -459,11 +478,23 @@ a:active {
   border: none;
   text-shadow: none;
   color: @dark-brand-text;
+  transition:background 100ms,color 100ms;
 }
 
 .btn:hover,
 .btn:active {
   background: @light-brand;
+  color: #fff;
+}
+
+.btn-danger {
+  background: @color-danger;
+  color:#555;
+}
+
+.btn-danger:hover,
+.btn-danger:active {
+  background: @bg-darkest;
   color: #fff;
 }
 
@@ -503,9 +534,37 @@ hr {
   background: @bg-brand;
 }
 
-.member {
-  display: inline-block;
-  background: @contrasting-brand;
+.user-image {
+  max-width: 100%;
+  height: auto;
+}
+
+//.member {
+//  display: inline-block;
+//  background: @contrasting-brand;
+//}
+
+.checkbox input[type=checkbox] {
+//  width:17px;
+//  height:17px;
+}
+
+/* Border box
+-------------------------------------------------- */
+.border-box {
+  border: 1px dashed #E6D8B5;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+.border-box:hover {
+  border: 1px dashed #C8C3AD;
+}
+
+.border-box h1:first-of-type,
+.border-box h2:first-of-type,
+.border-box h3:first-of-type {
+  margin-top: 0;
 }
 
 /* Custom backgrounds
@@ -693,19 +752,7 @@ hr {
 
 }
 
-@media (min-width: @screen-md-min) {
 
-  .secondary h1,
-  .secondary h2,
-  .secondary h3 {
-    margin-left: -20px;
-    padding: 5px 10px 5px 20px;
-    background: rgba(255, 255, 255, 0.5);
-    color: #777;
-    font-size: 1.5em;
-  }
-
-}
 
 .notice-box {
   color: #777;
@@ -718,7 +765,7 @@ hr {
 .notice-box:active {
   color: @dark-brand-text;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.5);
+  background: #ede8d4;
 }
 
 .notice-box:hover .notice-box__title {
@@ -757,6 +804,8 @@ hr {
   }
 }
 
+
+
 @media (min-width: @screen-md-min) {
 
   .notice-box {
@@ -774,21 +823,15 @@ hr {
   .secondary h3,
   .notice-box__title {
     padding: 5px 10px 5px 20px;
-    background: rgba(255, 255, 255, 0.5);
-
-  }
-
-}
-
-@media (min-width: @screen-lg-min) {
-  .secondary h1,
-  .secondary h2,
-  .secondary h3,
-  .notice-box__title {
+    background: #ede8d4;
     margin-left: -20px;
-    background: rgba(255, 255, 255, 0.5);
+    color: #777;
+    font-size: 1.5em;
   }
+
 }
+
+
 
 /* Specific layouts
 -------------------------------------------------- */

@@ -7,37 +7,7 @@
         <div class="container-fluid">
 
 
-            <?php
-
-            $isLoggedIn = true;
-
-            if ($isLoggedIn == true): ?>
-
-                <div class="top-game-options">
-                        <p class="top-game-options__title">
-                            Status in game:
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                    Member <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Separated link</a></li>
-                                </ul>
-                            </div>
-                        </p>
-
-                </div>
-
-            <?php else: ?>
-                <div class="top-game-options">
-                    <p class="top-game-options__title">You are not a member of this game</p>
-                    <a href="" class="btn btn-primary top-game-options__join">Join now</a> <a href="" class="top-game-options__read-start">or read from the beginning</a>
-                </div>
-            <?php endif; ?>
+            <?php include("_top-game-options.php") ?>
 
 
             <button type="button" class="sidecol-toggle collapsed" data-toggle="collapse" data-target=".sidebar__optional-content">
@@ -68,6 +38,11 @@
                 <div class="col-xs-12 col-sm-9 col-md-7 content-block infinite-height">
 
                     <div class="content-block__content">
+
+                        <div class="game-desc__info">
+                            <p><span class="sr-only">Category:</span>Modern fantasy</p>
+                            <p class="game-desc__created-by">Created by: <a href="">Kimmie1315</a></p>
+                        </div>
 
                         <div class="game-desc">
                             <h2 class="game-desc__title">About JMC Blue Dwarf:</h2>

@@ -1,7 +1,7 @@
 /* Variables
 -------------------------------------------------- */
 /* Common screen sizes for media queries
--------------------------------------------------- */
+  -------------------------------------------------- */
 /* Layout styles
 -------------------------------------------------- */
 body {
@@ -17,6 +17,8 @@ body {
   background: #ffffff;
   z-index: 100;
 }
+/* Content block - the middle column
+-------------------------------------------------- */
 .content-block {
   background: #ffffff;
   z-index: 200;
@@ -25,6 +27,11 @@ body {
 }
 .content-block__content {
   padding-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .content-block {
+    min-height: 600px;
+  }
 }
 .footer {
   background: #c8c3ad url(../images/bg-tex-darkest.jpg);
@@ -47,7 +54,7 @@ body {
     /* force infinitely tall columns*/
     padding-bottom: 5000px;
     margin-bottom: -5000px;
-    box-shadow: -2px 2px 20px #000000;
+    box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.5);
   }
   .navbar {
     border-radius: 0;
@@ -68,10 +75,10 @@ body {
 }
 @media (min-width: 1300px) {
   .container-fluid {
-    width: 1260px;
+    width: 1500px;
   }
   .footer .container-fluid {
-    width: 1260px;
+    width: 1500px;
   }
 }
 .hide-overflow {
@@ -89,9 +96,6 @@ body {
   .game-layout .content-block {
     margin-top: 80px;
     /* To match the offset */
-  }
-  .game-layout .content-block {
-    padding-left: 0;
   }
 }
 @media (min-width: 992px) {
@@ -293,11 +297,20 @@ body {
   margin-top: 4px;
 }
 @media (min-width: 768px) {
+  .sidebar__content {
+    padding-bottom: 20px;
+  }
   .sidebar__optional-content {
     display: block;
   }
   .sidecol-toggle {
     display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar__content {
+    position: absolute;
+    width: 100%;
   }
 }
 /* Sidebar nav
@@ -339,10 +352,6 @@ h2,
 h3 {
   color: #666;
 }
-.user-image {
-  max-width: 100%;
-  height: auto;
-}
 a {
   color: #527234;
 }
@@ -361,10 +370,20 @@ a:active {
   border: none;
   text-shadow: none;
   color: #527234;
+  transition: background 100ms,color 100ms;
 }
 .btn:hover,
 .btn:active {
   background: #97a835;
+  color: #fff;
+}
+.btn-danger {
+  background: #d26759;
+  color: #555;
+}
+.btn-danger:hover,
+.btn-danger:active {
+  background: #c8c3ad url(../images/bg-tex-darkest.jpg);
   color: #fff;
 }
 .offscreen {
@@ -398,9 +417,25 @@ hr {
   padding: 10px;
   background: #dad5bf;
 }
-.member {
-  display: inline-block;
-  background: #4c818f;
+.user-image {
+  max-width: 100%;
+  height: auto;
+}
+/* Border box
+-------------------------------------------------- */
+.border-box {
+  border: 1px dashed #E6D8B5;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+.border-box:hover {
+  border: 1px dashed #C8C3AD;
+}
+.border-box h1:first-of-type,
+.border-box h2:first-of-type,
+.border-box h3:first-of-type {
+  margin-top: 0;
 }
 /* Custom backgrounds
 -------------------------------------------------- */
@@ -546,17 +581,6 @@ hr {
 }
 /* Secondary notices - right col
 -------------------------------------------------- */
-@media (min-width: 992px) {
-  .secondary h1,
-  .secondary h2,
-  .secondary h3 {
-    margin-left: -20px;
-    padding: 5px 10px 5px 20px;
-    background: rgba(255, 255, 255, 0.5);
-    color: #777;
-    font-size: 1.5em;
-  }
-}
 .notice-box {
   color: #777;
   display: block;
@@ -567,7 +591,7 @@ hr {
 .notice-box:active {
   color: #527234;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.5);
+  background: #ede8d4;
 }
 .notice-box:hover .notice-box__title {
   color: #527234;
@@ -604,16 +628,10 @@ hr {
   .secondary h3,
   .notice-box__title {
     padding: 5px 10px 5px 20px;
-    background: rgba(255, 255, 255, 0.5);
-  }
-}
-@media (min-width: 1200px) {
-  .secondary h1,
-  .secondary h2,
-  .secondary h3,
-  .notice-box__title {
+    background: #ede8d4;
     margin-left: -20px;
-    background: rgba(255, 255, 255, 0.5);
+    color: #777;
+    font-size: 1.5em;
   }
 }
 /* Specific layouts
@@ -666,6 +684,12 @@ hr {
     margin: 0;
   }
 }
+/* Game options - member
+-------------------------------------------------- */
+.top-game-options--member .top-game-options__title {
+  margin: 0 10px 0 0;
+  display: inline-block;
+}
 /* Game info col styles
 -------------------------------------------------- */
 .sidebar__game-title {
@@ -693,6 +717,7 @@ hr {
   position: relative;
 }
 .edit-game {
+  display: none;
   background: #000000;
   color: #eee;
   padding: 5px;
@@ -715,6 +740,9 @@ hr {
   background: #97a835;
 }
 @media (min-width: 768px) {
+  .edit-game {
+    display: block;
+  }
   .sidebar__game-img:hover .edit-game__text {
     display: inline;
   }
@@ -956,6 +984,83 @@ hr {
 }
 .game-desc__title {
   margin-top: 0;
+}
+.game-desc__info {
+  float: right;
+  margin: 0 0 10px 10px;
+  border: 1px solid #eee;
+  background: #ffffff;
+  padding: 10px;
+  font-weight: bold;
+  color: #555;
+}
+.game-desc__created-by {
+  font-size: 0.8em;
+}
+.game-desc__info p:last-of-type {
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .game-desc__info {
+    margin-right: -20px;
+  }
+}
+/* List of members
+-------------------------------------------------- */
+.member {
+  position: relative;
+}
+.member__link {
+  line-height: 1em;
+}
+.member__link .gravatar {
+  margin-right: 10px;
+}
+.member__unsubscribe-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.member__unsubscribe-form .btn:hover {
+  background-color: #d26759;
+}
+/* List of members
+-------------------------------------------------- */
+.character-inline,
+.character-inline:visited {
+  display: inline-block;
+  position: relative;
+  background: #ede8d4;
+  margin: 0 2px 6px 0;
+  padding: 5px 5px 5px 40px;
+  height: 26px;
+  overflow: hidden;
+  vertical-align: middle;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  font-size: 0.85em;
+  line-height: 1em;
+  transition: color 200ms, background 200ms;
+}
+.character-inline:hover,
+.character-inline:active {
+  text-decoration: none;
+  color: #fff;
+  background: #97a835;
+}
+.character-inline img {
+  width: 35px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  vertical-align: middle;
+  opacity: 0.85;
+}
+.character-inline:hover img,
+.character-inline:active img {
+  opacity: 1;
 }
 /* Profile styles (public & private)
 -------------------------------------------------- */

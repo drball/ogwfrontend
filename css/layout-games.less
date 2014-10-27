@@ -36,6 +36,7 @@
   font-size:1.25em;
 }
 
+
 @media (min-width: @screen-sm-min) {
 
   .top-game-options   {
@@ -52,6 +53,14 @@
     margin:0;
   }
 
+}
+
+/* Game options - member
+-------------------------------------------------- */
+
+.top-game-options--member .top-game-options__title   {
+  margin:0 10px 0 0;
+  display: inline-block;
 }
 
 
@@ -86,6 +95,7 @@
 
 
 .edit-game {
+  display:none;
   background:rgba(0,0,0,1);
   color: #eee;
   padding:5px;
@@ -113,6 +123,11 @@
 }
 
 @media (min-width: @screen-sm-min) {
+
+  .edit-game {
+    display:block;
+  }
+
   .sidebar__game-img:hover .edit-game__text {
     display:inline;
   }
@@ -384,7 +399,96 @@
   margin-top:0;
 }
 
-@media (min-width: @screen-sm-min) {
+.game-desc__info {
+  float:right;
+  margin:0 0 10px 10px;
+  border:1px solid #eee;
+  background:@light-bg;
+  padding:10px;
+  font-weight: bold;
+  color:#555;
+}
+
+.game-desc__created-by {
+  font-size:0.8em;
+}
+
+.game-desc__info p:last-of-type {
+  margin-bottom:0;
+}
 
 
+@media (min-width: @screen-md-min) {
+  .game-desc__info {
+    margin-right:-20px;
+  }
+
+}
+
+/* List of members
+-------------------------------------------------- */
+
+.member {
+  position:relative;
+}
+
+.member__link {
+  line-height: 1em;
+}
+
+.member__link .gravatar {
+  margin-right:10px;
+}
+
+.member__title {
+
+}
+
+.member__unsubscribe-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.member__unsubscribe-form .btn:hover {
+  background-color:@color-danger;
+}
+
+/* List of members
+-------------------------------------------------- */
+.character-inline,
+.character-inline:visited {
+  display: inline-block;
+  position: relative;
+  background: @bg-light;
+  margin: 0 2px 6px 0;
+  padding: 5px 5px 5px 40px;
+  height: 26px;
+  overflow: hidden;
+  vertical-align: middle;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+  font-size:0.85em;
+  line-height:1em;
+  transition:color 200ms, background 200ms;
+}
+.character-inline:hover,
+.character-inline:active {
+  text-decoration: none;
+  color: #fff;
+  background: @light-brand;
+}
+.character-inline img {
+  width: 35px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  vertical-align: middle;
+  opacity: 0.85;
+}
+.character-inline:hover img,
+.character-inline:active img {
+  opacity: 1;
 }
