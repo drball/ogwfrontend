@@ -4,61 +4,83 @@
 -------------------------------------------------- */
 
 @media (min-width: @screen-sm-min) {
-  .public-profile-layout   {
-    margin-top:0;
+  .user-profile-layout   {
+    margin-top:-180px;
   }
 
-  .public-profile-layout .container-fluid   {
+  .user-profile-layout .container-fluid   {
     overflow:hidden;
   }
 
-  .public-profile-layout .content-block {
-    margin-top:130px; /* To match the offset */
+  .user-profile-layout .content-block {
+    margin-top:180px; /* To match the offset */
   }
 
-  .public-profile-layout .content-block {
+  .user-profile-layout .content-block {
 
   }
 
-  .public-profile-layout .secondary {
-    margin-top:110px; /* To match the offset - but not until it gets shown as a third column */
+  .user-profile-layout .secondary {
+    margin-top:180px; /* To match the offset - but not until it gets shown as a third column */
   }
 }
 
-/* Public profile */
+/* Public profile
+-------------------------------------------------- */
 
-.public-profile__user-image {
-  display:inline-block;
+
+.user-profile__details-wrapper:before {
+  clear:both;
 }
 
-.public-profile__title {
-  margin-top:-5px;
-  margin-left:175px;
-  line-height:1em;
-  font-size:3.2em;
+
+@media (min-width: @screen-sm-min) {
+
+
+  .user-profile__img-wrapper {
+    padding-right:0;
+  }
+
+  .user-profile__gameactivity{
+    padding-right:0;
+  }
+}
+
+
+
+
+/* User image
+-------------------------------------------------- */
+.user-profile__user-img {
+  margin-right:10px;
+  width:100%;
+}
+
+.user-profile__user-img img {
+  width:100%;
+  height:auto;
 }
 
 @media (min-width: @screen-sm-min) {
-  .public-profile__user-image {
-    margin:0 10px 10px -15px;
+  .user-profile-layout .user-image__status {
+    margin:-15px 15px 10px;
+  }
+
+  .user-profile__user-img {
     border:15px solid @light-bg;
-    float:left;
-    margin-top:-75px;
-    width:190px;
-    height:190px;
+    margin-top:-180px;
   }
 }
 
+/* Social icons
+-------------------------------------------------- */
 
-
-
-
-
-@media (min-width: @screen-md-min) {
-
+.user-profile__social-icons .btn {
+  font-size:0.8em;
 }
 
-.user-image img {
-  width:100%;
-  height:auto;
+@media (min-width: @screen-sm-min) {
+  .user-profile__social-icons {
+    margin:10px 15px 10px;
+  }
 }

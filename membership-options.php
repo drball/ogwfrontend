@@ -18,13 +18,13 @@
 
             </div>
 
-            <div class="col-xs-12 col-sm-9 col-md-7 content-block infinite-height post">
+            <div class="col-xs-12 col-sm-9 col-md-7 content-block infinite-height">
 
 
 
                 <div class="content-block__content">
 
-                    <h1>Membership options</h1>
+                    <h1 class="main-title">Membership options</h1>
 
                     <h3>Email Notification</h3>
 

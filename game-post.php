@@ -96,7 +96,7 @@
             </div>
 
             <aside class="col-xs-12 col-sm-9 col-sm-offset-3 col-md-2 col-md-offset-0 secondary">
-                <?php include("_secondary.php") ?>
+                <?php include("_secondary-games.php") ?>
             </aside>
 
         </div>

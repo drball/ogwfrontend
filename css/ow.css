@@ -31,6 +31,7 @@ body {
 @media (min-width: 768px) {
   .content-block {
     min-height: 600px;
+    padding-left: 20px;
   }
 }
 .footer {
@@ -75,10 +76,10 @@ body {
 }
 @media (min-width: 1300px) {
   .container-fluid {
-    width: 1500px;
+    width: 1260px;
   }
   .footer .container-fluid {
-    width: 1500px;
+    width: 1260px;
   }
 }
 .hide-overflow {
@@ -116,9 +117,6 @@ body {
   .game-home-layout .content-block {
     margin-top: 180px;
     /* To match the offset */
-  }
-  .game-home-layout .content-block {
-    padding-left: 0;
   }
 }
 @media (min-width: 992px) {
@@ -360,6 +358,10 @@ a:active {
   color: #4c818f;
   text-decoration: underline;
 }
+ul,
+ol {
+  padding-left: 1.3em;
+}
 .img-responsive {
   width: 100%;
 }
@@ -421,6 +423,22 @@ hr {
   max-width: 100%;
   height: auto;
 }
+.user-image__status {
+  background: #56742a;
+  color: #fff;
+  padding: 5px 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.user-image__status a,
+.user-image__status a:visited {
+  color: #97a835;
+  transition: color 200ms;
+}
+.user-image__status a:hover,
+.user-image__status a:active {
+  color: #fff;
+}
 /* Border box
 -------------------------------------------------- */
 .border-box {
@@ -436,6 +454,28 @@ hr {
 .border-box h2:first-of-type,
 .border-box h3:first-of-type {
   margin-top: 0;
+}
+/* Awards
+-------------------------------------------------- */
+.award-summary {
+  background: #ede8d4;
+  padding: 10px;
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+.award-summary__icon {
+  display: inline-block;
+  background: url(../images/trophy.png);
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+/* Icons
+-------------------------------------------------- */
+.icon-hero {
+  color: yellow;
 }
 /* Custom backgrounds
 -------------------------------------------------- */
@@ -507,19 +547,8 @@ hr {
 }
 /* A really tall version of the stripe, for game home
 -------------------------------------------------- */
-.stripe__text-wrapper {
-  height: 180px;
-}
-.stripe__text {
-  margin-top: 20px;
-  text-shadow: 2px 2px 3px #000;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 7px 10px;
-  position: absolute;
-  bottom: 0;
-}
-.stripe__text p:last-of-type {
-  margin: 0;
+.stripe--tall {
+  height: 100px;
 }
 @media (min-width: 768px) {
   .stripe--medium {
@@ -529,20 +558,14 @@ hr {
     height: 200px;
   }
 }
-/* Title in th stripe
+/* Main Title in the stripe
 -------------------------------------------------- */
 .main-title {
   color: #777;
   text-align: center;
   font-size: 2em;
-  margin: 0;
-}
-.stripe .main-title {
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  background: #fff;
-  padding: 5px 10px;
+  margin: 0 0 15px;
+  font-weight: bold;
 }
 @media (min-width: 768px) {
   .main-title {
@@ -554,7 +577,31 @@ hr {
 .content-block .main-title {
   margin-top: 0;
 }
-/* Monster logo */
+/* Main Title in the stripe
+-------------------------------------------------- */
+.stripe .main-title {
+  color: #eee;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+  display: inline-block;
+  padding: 6px 15px;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  max-width: 85%;
+}
+@media (min-width: 768px) {
+  .stripe .main-title {
+    bottom: 0;
+    max-width: 50%;
+    font-size: 3.6em;
+  }
+}
+/* Monster logo
+-------------------------------------------------- */
 .logo-monster,
 .logo-monster--medium {
   width: 66px;
@@ -578,6 +625,22 @@ hr {
   .logo-monster--large {
     width: 311px;
   }
+}
+/* Bootstrap overrides
+-------------------------------------------------- */
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #97a835;
+  border-color: #97a835;
+}
+.pagination > li > a,
+.pagination > li > span {
+  color: #777;
+  font-size: 1.2em;
 }
 /* Secondary notices - right col
 -------------------------------------------------- */
@@ -1024,7 +1087,18 @@ hr {
 .member__unsubscribe-form .btn:hover {
   background-color: #d26759;
 }
-/* List of members
+.member p {
+  margin: 10px 0;
+}
+.member__item {
+  margin: 10px 0;
+}
+.member__see-awards,
+.member__see-awards:visited {
+  margin: 10px 0;
+  display: inline-block;
+}
+/* Inline character link
 -------------------------------------------------- */
 .character-inline,
 .character-inline:visited {
@@ -1032,12 +1106,12 @@ hr {
   position: relative;
   background: #ede8d4;
   margin: 0 2px 6px 0;
-  padding: 5px 5px 5px 40px;
+  padding: 6px 5px 4px 40px;
   height: 26px;
   overflow: hidden;
   vertical-align: middle;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
-  font-size: 0.85em;
+  font-size: 1em;
   line-height: 1em;
   transition: color 200ms, background 200ms;
 }
@@ -1062,47 +1136,80 @@ hr {
 .character-inline:active img {
   opacity: 1;
 }
+/* Awards, list and give award btn
+-------------------------------------------------- */
+.give-award-btn__icon {
+  background: url("../images/trophy_add.png");
+  display: inline-block;
+  width: 32px;
+  height: 30px;
+  vertical-align: middle;
+}
+.award-icon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin: 0 5px 10px 0;
+}
 /* Profile styles (public & private)
 -------------------------------------------------- */
 /* Profile layout - Image on right overlaps the stripe
 -------------------------------------------------- */
 @media (min-width: 768px) {
-  .public-profile-layout {
-    margin-top: 0;
+  .user-profile-layout {
+    margin-top: -180px;
   }
-  .public-profile-layout .container-fluid {
+  .user-profile-layout .container-fluid {
     overflow: hidden;
   }
-  .public-profile-layout .content-block {
-    margin-top: 130px;
+  .user-profile-layout .content-block {
+    margin-top: 180px;
     /* To match the offset */
   }
-  .public-profile-layout .secondary {
-    margin-top: 110px;
+  .user-profile-layout .secondary {
+    margin-top: 180px;
     /* To match the offset - but not until it gets shown as a third column */
   }
 }
-/* Public profile */
-.public-profile__user-image {
-  display: inline-block;
-}
-.public-profile__title {
-  margin-top: -5px;
-  margin-left: 175px;
-  line-height: 1em;
-  font-size: 3.2em;
+/* Public profile
+-------------------------------------------------- */
+.user-profile__details-wrapper:before {
+  clear: both;
 }
 @media (min-width: 768px) {
-  .public-profile__user-image {
-    margin: 0 10px 10px -15px;
-    border: 15px solid #ffffff;
-    float: left;
-    margin-top: -75px;
-    width: 190px;
-    height: 190px;
+  .user-profile__img-wrapper {
+    padding-right: 0;
+  }
+  .user-profile__gameactivity {
+    padding-right: 0;
   }
 }
-.user-image img {
+/* User image
+-------------------------------------------------- */
+.user-profile__user-img {
+  margin-right: 10px;
+  width: 100%;
+}
+.user-profile__user-img img {
   width: 100%;
   height: auto;
+}
+@media (min-width: 768px) {
+  .user-profile-layout .user-image__status {
+    margin: -15px 15px 10px;
+  }
+  .user-profile__user-img {
+    border: 15px solid #ffffff;
+    margin-top: -180px;
+  }
+}
+/* Social icons
+-------------------------------------------------- */
+.user-profile__social-icons .btn {
+  font-size: 0.8em;
+}
+@media (min-width: 768px) {
+  .user-profile__social-icons {
+    margin: 10px 15px 10px;
+  }
 }

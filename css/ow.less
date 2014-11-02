@@ -44,6 +44,7 @@ body {
 @media (min-width: @screen-sm-min) {
   .content-block {
     min-height:600px;
+    padding-left:20px;
   }
 }
 
@@ -100,11 +101,11 @@ body {
 @media (min-width: 1300px) {
 
   .container-fluid {
-    width: 1500px;
+    width: 1260px;
   }
 
   .footer .container-fluid {
-    width: 1500px;
+    width: 1260px;
   }
 }
 
@@ -155,9 +156,6 @@ body {
     margin-top: 180px; /* To match the offset */
   }
 
-  .game-home-layout .content-block {
-    padding-left: 0;
-  }
 }
 
 @media (min-width: @screen-md-min) {
@@ -165,6 +163,7 @@ body {
     margin-top: 180px; /* To match the offset - but not until it gets shown as a third column */
   }
 }
+
 
 
 /* Navbar styles
@@ -467,6 +466,10 @@ a:active {
   text-decoration: underline;
 }
 
+ul,ol {
+  padding-left:1.3em;
+}
+
 .img-responsive {
   width: 100%;
 }
@@ -539,10 +542,24 @@ hr {
   height: auto;
 }
 
-//.member {
-//  display: inline-block;
-//  background: @contrasting-brand;
-//}
+.user-image__status {
+  background:@dark-brand;
+  color:#fff;
+  padding:5px 10px;
+  text-align:center;
+  font-weight: bold;
+}
+
+.user-image__status a,
+.user-image__status a:visited {
+  color:@light-brand;
+  transition: color 200ms;
+}
+
+.user-image__status a:hover,
+.user-image__status a:active {
+  color:#fff;
+}
 
 .checkbox input[type=checkbox] {
 //  width:17px;
@@ -565,6 +582,39 @@ hr {
 .border-box h2:first-of-type,
 .border-box h3:first-of-type {
   margin-top: 0;
+}
+
+/* Awards
+-------------------------------------------------- */
+.award-summary {
+  background:@bg-light;
+  padding:10px;
+  font-size:1.2em;
+  margin-bottom:25px;
+}
+
+.award-summary__info {
+
+}
+
+.award-summary__icon {
+  display:inline-block;
+  background:url(../images/trophy.png);
+  width:40px;
+  height:40px;
+  background-size: cover;
+  vertical-align: middle;
+  margin-right:10px;
+}
+
+.award-summary__icon-lg {
+
+}
+
+/* Icons
+-------------------------------------------------- */
+.icon-hero {
+  color:yellow;
 }
 
 /* Custom backgrounds
@@ -654,21 +704,8 @@ hr {
 /* A really tall version of the stripe, for game home
 -------------------------------------------------- */
 
-.stripe__text-wrapper {
-  height: 180px;
-}
-
-.stripe__text {
-  margin-top: 20px;
-  text-shadow: 2px 2px 3px #000;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 7px 10px;
-  position: absolute;
-  bottom: 0;
-}
-
-.stripe__text p:last-of-type {
-  margin: 0;
+.stripe--tall {
+  height: 100px;
 }
 
 @media (min-width: @screen-sm-min) {
@@ -683,22 +720,17 @@ hr {
 
 }
 
-/* Title in th stripe
+/* Main Title in the stripe
 -------------------------------------------------- */
 .main-title {
   color: #777;
   text-align: center;
   font-size: 2em;
-  margin: 0;
+  margin: 0 0 15px;
+  font-weight: bold;
 }
 
-.stripe .main-title {
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  background: #fff;
-  padding: 5px 10px;
-}
+
 
 @media (min-width: @screen-sm-min) {
   .main-title {
@@ -713,7 +745,34 @@ hr {
   margin-top: 0;
 }
 
-/* Monster logo */
+/* Main Title in the stripe
+-------------------------------------------------- */
+.stripe .main-title {
+  color:#eee;
+  background: rgba(0,0,0,.6);
+  font-size:2em;
+  font-weight: bold;
+  margin:0;
+  text-align: left;
+  display:inline-block;
+  padding: 6px 15px;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  max-width:85%;
+}
+
+@media (min-width: @screen-sm-min) {
+  .stripe .main-title {
+    bottom: 0;
+    max-width:50%;
+    font-size:3.6em;
+  }
+
+}
+
+/* Monster logo
+-------------------------------------------------- */
 .logo-monster,
 .logo-monster--medium {
   width: 66px;
@@ -741,6 +800,24 @@ hr {
   .logo-monster--large {
     width: 311px;
   }
+}
+
+/* Bootstrap overrides
+-------------------------------------------------- */
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+  background-color:@light-brand;
+  border-color:@light-brand;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+  color:#777;
+  font-size:1.2em;
 }
 
 /* Secondary notices - right col
@@ -843,6 +920,9 @@ hr {
 /* Profile styles (public & private)
 -------------------------------------------------- */
 @import 'layout-profile';
+
+
+
 
 
 

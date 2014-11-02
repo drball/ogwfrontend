@@ -454,7 +454,24 @@
   background-color:@color-danger;
 }
 
-/* List of members
+.member p {
+  margin:10px 0;
+}
+
+.member__item {
+  margin:10px 0;
+}
+
+.member__see-awards,
+.member__see-awards:visited {
+  margin:10px 0;
+  display:inline-block;
+
+}
+
+
+
+/* Inline character link
 -------------------------------------------------- */
 .character-inline,
 .character-inline:visited {
@@ -462,12 +479,12 @@
   position: relative;
   background: @bg-light;
   margin: 0 2px 6px 0;
-  padding: 5px 5px 5px 40px;
+  padding: 6px 5px 4px 40px;
   height: 26px;
   overflow: hidden;
   vertical-align: middle;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
-  font-size:0.85em;
+  font-size:1em;
   line-height:1em;
   transition:color 200ms, background 200ms;
 }
@@ -492,3 +509,24 @@
 .character-inline:active img {
   opacity: 1;
 }
+
+/* Awards, list and give award btn
+-------------------------------------------------- */
+.give-award-btn {}
+
+.give-award-btn__icon {
+  background:url("../images/trophy_add.png");
+  display:inline-block;
+  width:32px;
+  height: 30px;
+  vertical-align:middle;
+}
+
+.award-icon {
+  width: 30px;
+  height: 30px;
+  display:inline-block;
+  margin:0 5px 10px 0;
+}
+
+.award-icon__wrapper {}
